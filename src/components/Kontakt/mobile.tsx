@@ -36,7 +36,9 @@ export default function Mobile() {
 					<div className='mobile-top-element-3'></div>
 				</div>
 				<div className={`${phoneScreen ? 'screenOFF' : ' '} mobile-content`} id='phoneScreen'>
+					
 					<MobileDate/>
+
 					{/*<div className='mobile-search-div'>
 						<div className='mobile-searchbar'></div>
 						<img src="/img/kontakt/google.png" alt='google icon'/>
