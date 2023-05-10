@@ -1,0 +1,533 @@
+.bg-skills{
+  width: 100%;
+  display: flex;
+}
+.skill-div:after{
+  content: '';
+  display: block;
+  width: 250%;
+  height: 250%;
+  z-index: -1;
+  height: auto;
+  aspect-ratio: 1/1;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  background-image: radial-gradient(rgb(167 164 191 / 25%), transparent 70%);
+  transition: 0.01s;
+  transition-delay: 0s;
+}
+
+.skills-padding{
+  padding:120px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.skills-content{
+  width:100%;
+  min-height:600px;
+  position: relative;
+  z-index:1;
+  display: flex;
+}
+
+#skills-title{
+  transform: scale(0.5);
+  opacity: 0;
+  align-self: center;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  transition: 1s;
+  z-index: 1;
+  pointer-events: none;
+}
+.visible #skills-title{
+  transform: scale(1);
+  opacity: 1;
+  pointer-events: all;
+}
+#skills-title h2{
+  cursor: context-menu;
+  margin: auto;
+  transition: 1s;
+  position: relative;
+   font-size: clamp(42px, 5vw, 72px);
+   text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px var(--primary), 0 0 82px var(--primary), 0 0 92px var(--primary), 0 0 102px var(--primary), 0 0 151px var(--primary);
+  animation: pulsate 0.11s ease-in-out infinite alternate;
+}
+.skill-title-bg-transparent{
+  pointer-events: none;
+  width: 300%;
+  height: 300%;
+  aspect-ratio: 1/1;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  background-image: radial-gradient(rgb(167 164 191 / 30%), transparent 70%);
+}
+#skills-title:hover{
+  transform: scale(2);
+  width: calc(50% + 180px);
+  height: 450px;
+  display: flex;
+}
+#skills-title:hover h2{
+  opacity: 0;
+  text-shadow: none !important;
+  animation: none !important;
+}
+@keyframes pulsate {
+100% {
+    text-shadow:
+    0 0 4px #fff,
+    0 0 11px #fff,
+    0 0 19px #fff,
+    0 0 40px var(--primary),
+    0 0 80px var(--primary),
+    0 0 90px var(--primary),
+    0 0 100px var(--primary),
+    0 0 150px var(--primary);
+}
+0% {
+  text-shadow:
+  0 0 4px #fff,
+  0 0 10px #fff,
+  0 0 18px #fff,
+  0 0 38px var(--primary),
+  0 0 73px var(--primary),
+  0 0 80px var(--primary),
+  0 0 94px var(--primary),
+  0 0 140px var(--primary);
+}
+}
+
+.skillDots {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  transform: translateY(-100%);
+  transition: 0.01s 0s;
+  opacity:0;
+}
+.skillDotEmpty, .skillDotFill {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  margin: 3px;
+}
+.skillDotFill{
+  /*background-image: linear-gradient(115deg, #fe8849 25%, #bd2f3c 85%);*/
+  position: relative;
+  outline: solid 1px #6db8d1;
+   transition: 0.01s;
+   transition-delay: 0s;
+   background-color:black;
+}
+.stillDotFill:after{
+  background-image: radial-gradient(#ffffff,transparent, transparent);
+  width: 200%;
+  height: 200%;
+  top: -70%;
+  position: absolute;
+  left: -30%;
+  content: '';
+  display: block;
+}
+.skillDotEmpty {
+  background-color: #000000;
+  outline: solid 1px #6db8d1;
+}
+.skillTitle {
+  font-size: 24px !important;
+  font-weight: 600;
+  margin-bottom: 0px;
+  margin-top: 10px;
+  opacity:0;
+  transition: 0.01s 0s;
+  position: relative;
+  transform: translateY(-100%);
+}
+.skillLevel {
+  font-size: 20px !important;
+  opacity: 0.7;
+  margin-top: 0px;
+  margin-bottom: 13px;
+  opacity:0;
+  transition: 0.01s 0s;
+  position: relative;
+  transform: translateY(-100%);
+}
+.skillLevel .falseSkill{
+position: relative;
+top:0;
+left:0;
+right: 0;
+opacity:1;
+transition: 0.01s 0s;
+display: block;
+}
+.skillLevel .trueSkill{
+position: absolute;
+opacity:0;
+top:0;
+left:0;
+right: 0;
+transition: 0.01s 0s;
+display: block;
+color:#ff201d;
+font-weight: 600;
+}
+#skills-title:hover ~ .skill-div .skillLevel .falseSkill,
+#skills-title:hover ~ .skill-div .skillLevel .trueSkill{
+transition: 0.5s 5.5s !important;
+}
+#skills-title:hover ~ .skill-div .skillLevel .falseSkill{
+position: absolute;
+opacity: 0;
+}
+#skills-title:hover ~ .skill-div .skillLevel .trueSkill{
+position: relative;
+opacity: 1;
+}
+
+.skill-icon{
+height:100px;
+position: relative;
+margin-left: auto;
+margin-right: auto;
+width: auto;
+position: relative;
+transform: translateY(50%);
+transition: 0.01s 0s;
+}
+
+.skill-div{
+  width: 160px;
+  text-align: center;
+  color:White;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  transition: 1s;
+  transform: translate(-50%, -50%);
+}
+#skills-title:hover ~ .skill-div,
+#skills-title:hover ~ .skill-div .skillTitle,
+#skills-title:hover ~ .skill-div .skillDots{
+opacity:1;
+}
+#skills-title:hover ~ .skill-div .skillLevel{
+opacity: 0.8;
+}
+#skills-title:hover ~ .skill-div .skillTitle,
+#skills-title:hover ~ .skill-div .skillLevel,
+#skills-title:hover ~ .skill-div .skill-icon,
+#skills-title:hover ~ .skill-div .skillDots{
+transform: translateY(0%);
+}
+#skills-title:hover ~ .skill-div .skill-icon{
+transition: 1s 1s;
+}
+#skills-title:hover ~ .skill-div .skillTitle{
+transition: 0.5s 1.2s;
+}
+#skills-title:hover ~ .skill-div .skillLevel{
+transition: 0.5s 1.5s;
+}
+#skills-title:hover ~ .skill-div .skillDots{
+transition: 0.5s 1.8s;
+}
+#skills-title:hover ~ .skill-div .skillDots .skillDotFill{
+background-color: var(--primary);
+box-shadow: 0 0 2px var(--primary), 0 0 4px var(--primary), 0 0 10px var(--primary), 0 0 18px var(--primary), 0 0 22px var(--primary), 0 0 26px var(--primary), 0 0 33px var(--primary), 0 0 51px var(--primary);
+}
+#skills-title:hover ~ .skill-div .skillDots .skillDotFill:nth-child(1){
+transition-delay: 2.5s;
+}
+#skills-title:hover ~ .skill-div .skillDots .skillDotFill:nth-child(2){
+transition-delay: 2.8s;
+}
+#skills-title:hover ~ .skill-div .skillDots .skillDotFill:nth-child(3){
+transition-delay: 3.1s;
+}
+#skills-title:hover ~ .skill-div .skillDots .skillDotFill:nth-child(4){
+transition-delay: 3.4s;
+}
+#skills-title:hover ~ .skill-div .skillDots .skillDotFill:nth-child(5){
+transition-delay: 3.7s;
+}
+.skillDotFill:nth-child(6){
+opacity: 0;
+transform: scale(5) translate(-25%, -25%);
+transition: 0.01s 0s;
+}
+#skills-title:hover ~ .skill-div .skillDots .skillDotFill:nth-child(6){
+transition: 1s 4.5s;
+transform: scale(1) translate(0, 0);
+opacity: 1;
+}
+.skill-div.skill-7 .skillDots .slayer{
+transition: filter 0.1s, transform 1s;
+}
+.skill-div.skill-7 .skillDots .slayer .slayer-move{
+position: relative;
+transform: translateX(11px);
+transition: 0.01s 0s;
+}
+#skills-title:hover ~ .skill-div .skillDots .slayer .slayer-move{
+transform: translateX(0);
+transition-delay: 4.5s !important;
+transition: 1s;
+}
+#skills-title:hover ~ .skill-div .skillDots .slayer{
+filter: hue-rotate(180deg) contrast(0.5) saturate(5);
+transition-delay: 5.5s;
+}
+.skill-7.hide-skill{
+  opacity: 0 !important;
+}
+#skills-title:hover ~ .skill-7.animate-hidden-skill{
+  opacity: 1;
+  transition: 1s;
+}
+.skill-7:after{
+background-image: radial-gradient(rgb(241 58 58 / 30%), transparent 70%);
+filter: saturate(0.1) brightness(2);
+transition: 0.3s;
+}
+#skills-title:hover ~ .skill-div.skill-7:after{
+  filter: saturate(1) brightness(1);
+  transition-delay: 5.5s;
+}
+/*react*/
+#skills-title:hover ~ .skill-1{
+top:52%;
+left:0;
+}
+/*next*/
+#skills-title:hover ~ .skill-2{
+top:100%;
+left:31%;
+}
+/*html css*/
+#skills-title:hover ~ .skill-3{
+top:5%;
+left:28%;
+}
+/*JS*/
+#skills-title:hover ~ .skill-4{
+top:0%;
+left:67%;
+}
+/*Wordpress*/
+#skills-title:hover ~ .skill-5{
+top:43%;
+left:100%;
+}
+/*TypeScript*/
+#skills-title:hover ~ .skill-6{
+top:95%;
+left:71%;
+}
+/*Doom Slayer*/
+#skills-title:hover ~ .skill-7{
+  top: 49%;
+  left: 49%;
+}
+
+@media (max-width: 1280px){
+  .skills-padding{
+    padding: 96px;
+  }
+  /*html css*/
+  #skills-title:hover ~ .skill-3{
+    top: 5%;
+    left: 20%;
+  }
+  /*JS*/
+  #skills-title:hover ~ .skill-4{
+    top: 0%;
+    left: 70%;
+  }
+  /*Wordpress*/
+  #skills-title:hover ~ .skill-5{
+    top: 47%;
+    left: 100%;
+  }
+  /*TypeScript*/
+  #skills-title:hover ~ .skill-6{
+    top: 95%;
+    left: 76%;
+  }
+  /*Doom Slayer*/
+  #skills-title:hover ~ .skill-7{
+      top: 46%;
+      left: 49%;
+  }
+}
+@media (max-width:1050px){
+  .skill-div{
+    transform: translate(-50%, -50%) scale(0.8) !important;
+  }
+    #skills-title:hover ~ .skill-2 {
+      top: 100%;
+      left: 14%;
+  }
+    #skills-title:hover ~ .skill-3 {
+    top: 5%;
+    left: 15%;
+  }
+}
+@media (max-width:800px){
+  #skills-title:hover ~ .skill-1 {
+    top: 51%;
+    left: 0;
+  }
+  #skills-title:hover ~ .skill-4 {
+    top: 0%;
+    left: 89%;
+  }    
+  #skills-title:hover ~ .skill-7{
+    top: 48%;
+    left: 50%;
+  }
+}
+@media (max-width:767px){
+  #skills-title:hover ~ .skill-2 {
+    top: 100%;
+    left: 10%;
+  }
+  #skills-title:hover ~ .skill-3 {
+    top: 5%;
+    left: 10%;
+  }
+  #skills-title:hover ~ .skill-4 {
+    top: 0%;
+    left: 90%;
+  }
+  #skills-title:hover ~ .skill-6 {
+    top: 95%;
+    left: 90%;
+  }
+  #skills-title:hover ~ .skill-7{
+    top: 32%;
+    left: 53%;
+  }
+}
+@media (max-width:600px){
+  #skills-title:hover ~ .skill-2 {
+    top: 100%;
+    left: 0%;
+  }
+  #skills-title:hover ~ .skill-3 {
+    top: 5%;
+    left: 0%;
+  }
+  #skills-title:hover ~ .skill-4 {
+    top: 0%;
+    left: 100%;
+  }
+  #skills-title:hover ~ .skill-6 {
+    top: 95%;
+    left: 100%;
+  }
+  .skill-7, .hidden-skill-div{
+    display: none !important;
+  }
+}
+
+@media (max-width:499px){
+  .skills-padding {
+    padding: 90px 70px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .skill-div{
+    transform: translate(-50%, -50%) scale(0.7) !important;
+  }
+}
+
+@media (max-width:360px){
+  .skill-div{
+    transform: translate(-50%, -50%) scale(0.5) !important;
+  }
+  .skills-padding {
+    padding: 70px 50px;
+  }
+  .skills-content {
+    min-height: 375px;
+  }
+  #skills-title:hover{
+    height: 300px;
+  }
+}
+
+.skillsHands{
+  width: 500px;
+  position: absolute;
+  transform: translate(-50%, -30%);
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  max-width: 200%;
+  filter: invert(1) drop-shadow(0px 0px 25px #56bcf9);
+}
+
+.hidden-skill-div{
+  position: absolute;
+  top: calc(100% + 75px);
+  left: calc(100% + 75px);
+  opacity: 0.05;
+  transform: translate(-50%,-50%);
+  cursor: pointer;
+  z-index: 10;
+  transition: 0.7s;
+  width: 60px;
+  height: 50px;
+}
+.hidden-skill-icon{
+  animation: 1s smallLight alternate infinite;
+  filter: drop-shadow(0px 0px 0px red);
+  width: 50px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@keyframes smallLight{
+  0%{opacity: 0.5;}
+  100%{opacity: 1;}
+}
+.hidden-skill-div:hover{
+  opacity: 0.5;
+}
+.hidden-skill-div p{
+  font-size: 14px;
+  line-height: 1;
+  color: red;
+  opacity: 0;
+  position: absolute;
+  left:0;
+  right: 0;
+  top:50%;
+  margin-top:5px;
+  transition: 1s;
+}
+.hidden-skill-div:hover p{
+  left:0;
+  right: 0;
+  top:100%;
+  opacity: 1;
+}
+.hidden-skill-div.active-hidden-div{
+  opacity: 1;
+}
+.hidden-skill-div.active-hidden-div .hidden-skill-icon{
+  filter: drop-shadow(0px 0px 6px red);
+}

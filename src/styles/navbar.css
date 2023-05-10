@@ -1,0 +1,157 @@
+.navbarFloat{
+  position: fixed;
+  z-index: 999;
+  bottom: 80px;
+  left: 0;
+  right: 0;
+  margin: 0 30px;
+  text-align: center;
+  pointer-events: none;
+}
+.navbarStyle{
+  color: white;
+  backdrop-filter: blur(3px);
+  border-radius: 100px;
+  padding: 0 30px;
+  text-align: center;
+  /*box-shadow: 0 0 8px 10px rgba(255,255,255,0.04);
+  background-color: rgb(255 255 255 / 4%);*/
+  background-image: linear-gradient(22deg, rgb(14 120 131 / 30%) 25%, rgb(103 212 233 / 30%));
+  display: inline-block;
+  box-shadow: 15px 15px 15px rgb(0 0 0 / 30%);
+  transition: 1s;
+  pointer-events: all;
+}
+.navbarList{
+  transition: 0.5s;
+}
+.navbarList li{
+  margin: 10px;
+  padding: 0px 20px;
+  display: inline-block;
+}
+
+@media (max-width:767px){
+  .navbarList li{
+    margin: 10px 0px;
+    padding: 0px 15px;
+  }
+}
+
+.navbarList li a{
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  transform: scale(0.9);
+}
+.navbarList li a.active,
+.navbarList li a:hover{
+  transform: scale(1);
+}
+
+.navbarList li a:after{
+  content: '';
+  transition: 1s;
+  opacity: 0;
+  display: block;
+  pointer-events: none;
+  width: auto;
+  height: 250%;
+  aspect-ratio: 1/1;
+  position: absolute;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  background-image: radial-gradient(rgb(167 164 191 / 50%), transparent 50%);
+}
+.navbarList li a:hover:after,
+.navbarList li a:hover:focus,
+.navbarList li a:hover:active{
+  opacity: 1;
+}
+.sectionIcon{
+  position:relative;
+  display: inline-block;
+  font-size: clamp(20px, 2vw, 28px);
+  margin-bottom: 5px;
+  margin-top: 5px;
+  opacity: 0.5;
+}
+.sectionName{
+  position:relative;
+  font-size: clamp(16px, 2vw, 21px);
+}
+
+.hamburgerNav{
+  display: none;
+}
+.hamburgerStyle{
+  height:25px;
+  width: 40px;
+  position: relative;
+  transition: 0.5s;
+}
+.hamburgerNav svg{
+  position: relative;
+  display: inline-block;
+  font-size: 32px;
+  top:-6px;
+  opacity: 0.7;
+  transition: 0.5s;
+}
+.hamburgerNav:hover{
+  opacity: 1;
+}
+@media (max-width:500px){
+  .navbarFloat{
+    right: unset;
+  }
+  .navbarStyle{
+    padding: 15px;
+  }
+  .navbarList li {
+    margin: 15px 0px;
+    padding: 0px 0px;
+    display: block;
+  }
+  .navbarLight{
+    width: 150%;
+    height: auto;
+  }
+  .hamburgerNav{
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+  }
+  .navbarList{
+    max-height: 0px;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .navbarList.visible{
+    pointer-events: all;
+    max-height: 500px;
+    opacity: 1;
+    margin-bottom: 20px;
+  }
+}
+
+@media(min-width: 2050px){
+  .navbarList li {
+    margin: 15px 0px;
+    padding: 0px 0px;
+    display: block;
+  }
+  .navbarFloat {
+    top: 50%;
+    left: 80px !important;
+    right: inherit !important;
+    transform: translateY(-50%);
+    margin: 0 !important;
+    bottom: inherit !important;
+  }
+  .navbarStyle{
+    padding:15px;
+  }
+}

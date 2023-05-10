@@ -1,0 +1,116 @@
+.light-behind-404{
+  pointer-events: none;
+  display: block;
+  width: 150%;
+  height: 150%;
+  aspect-ratio: 1/1;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  background-image: radial-gradient(rgb(167 164 191 / 30%), transparent 70%);
+  z-index: -1;
+}
+
+.napisyAnimation{
+  animation: 1.5s moveDown 0.3s forwards ease-out;
+  position: relative;
+  transform: translateY(-50%);
+  opacity: 0;
+}
+@keyframes moveDown{
+  0%{opacity: 0; transform: translateY(-50%);}
+  100%{opacity: 1; transform: translateY(0%);}
+}
+
+.clownImage{
+  animation: 1.5s moveUp 0.3s forwards ease-out;
+  opacity:0;
+  transform: translateY(50%);
+  position: relative;
+  filter: drop-shadow(0px 4px 6px black);
+}
+@keyframes moveUp{
+  0%{opacity: 0; transform: translateY(50%);}
+  100%{opacity:1; transform: translateY(0%);}
+}
+
+.animate-letters span{
+  animation: 2s movingLetters ease-in-out infinite alternate;
+  position: relative;
+  display: inline-block;
+  transition: 2s;
+  transform: translateY(-0%);
+}
+
+@keyframes movingLetters{
+  0%{transform: translateY(-0%);}
+  50%{transform: translateY(-0%);}
+  100%{transform: translateY(-25%);}
+}
+
+.pomaranczaDiv{
+  display: inline-block;
+  border-radius: 150px 0 0 150px;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+.pomaranczaDiv img{
+  transform: rotate(5deg);
+  transform-origin: left;
+  position: relative;
+  left: -50px;
+  transition: 0.3s;
+  animation: 1.5s pomaranczaShow forwards;
+}
+
+.pomaranczaDiv:hover img{
+  animation: 0.2s pomaranczaShow2 forwards;
+}
+@keyframes pomaranczaShow{
+  0%{transform: rotate(30deg); left: -100%;}
+  100%{transform: rotate(5deg); left: -50px;}
+}
+@keyframes pomaranczaShow2{
+  0%{transform: rotate(5deg); left: -50px;}
+  100%{transform: rotate(30deg); left: -100%;}
+}
+
+.pomaranczaNapis{
+  font-size: 45px;
+  position: absolute;
+  top: -40px;
+  left: 0;
+  right: 0;
+  transition: 0.1s;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  animation: 2s napisShow; 
+}
+@keyframes napisShow{
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+}
+.pomaranczaDiv:hover .pomaranczaNapis{
+  opacity: 0;
+  animation: none;
+}
+.pomaranczaNapisHover{
+  font-size: 80px;
+  position: absolute;
+  top: -40px;
+  left: 0;
+  right: 0;
+  transition: 0.2s;
+  opacity: 0;
+  scale: 0;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+.pomaranczaDiv:hover .pomaranczaNapisHover{
+  transform: translateY(50%);
+  opacity: 1;
+  scale:1;
+}

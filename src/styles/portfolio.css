@@ -1,0 +1,138 @@
+.portfolioImage{
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.portfolioWebsite{
+  border-radius: 25px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 500px;
+  aspect-ratio: 15/10;
+  position: relative;
+  background-position: top center;
+  background-size: cover;
+  overflow: hidden;
+  transition: 1s;
+}
+
+.portfolioWebsite:after{
+  content: "";
+  width:100%;
+  height:120%;
+  bottom: 100%;
+  left:0;
+  position: absolute;
+  background-image: linear-gradient(22deg, rgb(14 120 131 / 70%) 25%, rgb(158 211 221 / 70%)) !important;
+  transition: 0.3s;
+  backdrop-filter: blur(3px);
+}
+
+.portfolioWebsite:hover:after{
+  bottom:-10%;
+}
+
+.tab .portfolioSiteAnimate{
+  opacity:0;
+  transform: translateX(100%);
+  position: relative;
+  transition: 1s;
+  animation-timing-function: ease-in;
+}
+.tab.tab-hide .portfolioSiteAnimate{
+  transition: 0s 0s !important;
+}
+.visible .tab.tab-visible .portfolioSiteAnimate{
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+.portfolioLink{
+  z-index: 5;
+  display: flex;
+  width: 100%;
+  height:100%;
+  position: absolute;
+  top:0;
+  left:0;
+  text-decoration: none;
+  padding:15px;
+  align-self: center;
+}
+
+.portfolioWebsite .portfolioLink .divContent{
+  margin:auto;
+  position: relative;
+  bottom:-100px;
+  opacity: 0;
+  transition: 0.3s;
+  white-space: pre-line;
+}
+.portfolioWebsite:hover .portfolioLink .divContent{
+  opacity: 1;
+  bottom:0;
+}
+.portfolioLink .portfolioTitle{
+  font-size: clamp(22px, 5vw, 30px);
+  color:white;
+  display: block;
+  line-height: 1.1;
+  margin-bottom:15px;
+  text-shadow: 1px 0 black, 0 1px black, -1px 0 black, 0 -1px black;
+}
+
+.portfolioLink .portfolioInfo{
+  font-size: clamp(17px, 3vw, 20px);
+  color:white;
+  display: block;
+  text-shadow: 1px 0 black, 0 1px black, -1px 0 black, 0 -1px black;
+}
+
+.linkTab{
+  display: inline-block;
+  font-size: clamp(20px, 6vw, 32px);
+  position: relative;
+  cursor: pointer;
+  padding: 20px 15px;
+  transition: 1s;
+  text-shadow: none;
+  font-weight: 600;
+}
+.linkTab:after{
+  transition: 1s;
+  opacity: 0;
+  content: '';
+  display: block;
+  pointer-events: none;
+  width: 175%;
+  height: 175%;
+  aspect-ratio: 1/1;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  background-image: radial-gradient(rgb(167 164 191 / 30%), transparent 70%);
+}
+.linkTab.active{
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #3ebac6, 0 0 82px #3ebac6, 0 0 92px #3ebac6, 0 0 102px #3ebac6, 0 0 151px #3ebac6;
+  animation: pulsate 0.11s ease-in-out infinite alternate;
+}
+.linkTab.active:after{
+  opacity: 1;
+}
+
+.tab{
+  transition: 1s;
+  height:auto;
+}
+.tab-hide{
+  height: 0 !important;
+  overflow: hidden !important;
+}
+.tab-visible{
+  display: block;
+}
+
