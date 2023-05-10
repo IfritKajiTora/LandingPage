@@ -10,6 +10,7 @@
   --bodyBackgroundColor: #01020b;
   --primaryGradientBG: linear-gradient(315deg, #005977, #1f9ba7);
   --primary: #1f9ba7;
+  --primary-light: #9ed3dd;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -37,10 +38,9 @@
   border:solid 2px #000000;
 }
 ::-webkit-scrollbar-thumb:hover{
-  background-color: var(--primary);
+  background-color: var(--primary-light);
   filter: brightness(1.5);
 }
-
 
 img{
 	max-width: 100%;
