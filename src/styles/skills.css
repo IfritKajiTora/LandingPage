@@ -54,7 +54,11 @@
   transition: 1s;
   position: relative;
    font-size: clamp(42px, 5vw, 72px);
-   text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px var(--primary), 0 0 82px var(--primary), 0 0 92px var(--primary), 0 0 102px var(--primary), 0 0 151px var(--primary);
+   text-shadow: 
+   0 0 10px #fff, 
+   0 0 42px var(--primary), 
+   0 0 92px var(--primary), 
+   0 0 151px var(--primary);
   animation: pulsate 0.11s ease-in-out infinite alternate;
 }
 .skill-title-bg-transparent{
@@ -82,26 +86,18 @@
 @keyframes pulsate {
 100% {
     text-shadow:
-    0 0 4px #fff,
     0 0 11px #fff,
-    0 0 19px #fff,
     0 0 40px var(--primary),
-    0 0 80px var(--primary),
     0 0 90px var(--primary),
-    0 0 100px var(--primary),
     0 0 150px var(--primary);
 }
 0% {
   text-shadow:
-  0 0 4px #fff,
-  0 0 10px #fff,
-  0 0 18px #fff,
-  0 0 38px var(--primary),
-  0 0 73px var(--primary),
-  0 0 80px var(--primary),
-  0 0 94px var(--primary),
-  0 0 140px var(--primary);
-}
+    0 0 10px #fff,
+    0 0 38px var(--primary),
+    0 0 80px var(--primary),
+    0 0 140px var(--primary);
+  }
 }
 
 .skillDots {

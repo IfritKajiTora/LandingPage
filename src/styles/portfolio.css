@@ -117,7 +117,11 @@
   background-image: radial-gradient(rgb(167 164 191 / 30%), transparent 70%);
 }
 .linkTab.active{
-  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #3ebac6, 0 0 82px #3ebac6, 0 0 92px #3ebac6, 0 0 102px #3ebac6, 0 0 151px #3ebac6;
+  text-shadow: 
+  0 0 10px #fff, 
+  0 0 42px #3ebac6, 
+  0 0 92px #3ebac6, 
+  0 0 151px #3ebac6;
   animation: pulsate 0.11s ease-in-out infinite alternate;
 }
 .linkTab.active:after{
