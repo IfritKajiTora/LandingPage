@@ -76,8 +76,25 @@
   border:solid 5px #64636a;
   position: relative;
 }
+.mobile-background{
+  border-radius: 25px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left:0;
+  right:0;
+  object-fit: cover;
+  object-position: left center;
+  transition: 1s;
+}
+.mobile-hover:hover .mobile-background{
+  object-position: center center;
+}
+.mobile-design.mobile-background-hide .mobile-background{
+  transition: 0s;
+  opacity: 0;
+}
 .mobile-hover:hover .mobile-design{
-  background-position: center center !important;
   transform: perspective(700px) rotateY(-25deg) rotateX(8deg) rotateZ(8deg);
   box-shadow: 40px 40px 40px rgba(0,0,0,0.7);
   border-bottom: solid 4px #64636a;

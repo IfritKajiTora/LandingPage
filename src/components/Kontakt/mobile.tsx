@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
+import Image from 'next/image'
 import {useInView} from 'react-intersection-observer'
 import MobileIcon from './mobileIcon'
 import dynamic from 'next/dynamic';
@@ -17,12 +18,8 @@ export default function Mobile() {
   return (
     <>
 			<div className={`phoneAnimate ${phoneVisible ? 'visible' : ''}`} ref={phoneRef}>
-				<div className='mobile-design'
-					style={{
-					backgroundImage: phoneScreen ? '' : 'url(./img/kontakt/mobile-background.jpg)',
-					backgroundPosition: 'left center', 
-					backgroundSize: 'cover'
-				}}>
+				<div className={`mobile-design ${phoneScreen ? 'mobile-background-hide' : ''}`}>
+					<Image className='mobile-background' src='/img/kontakt/mobile-background.jpg' alt='phone background image mountains' width={951} height={634}/>
 				<div className='obramowanie'></div>
 				<div className='silver-shine-div'>
 					<div className='silver-shine'></div>
