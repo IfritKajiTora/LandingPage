@@ -16,7 +16,7 @@ export default function Skills(){
     <div className={`skills-content ${skillsVisible ? 'visible' : ''}`} ref={skillsObserver}>
 					<div id="skills-title">
 						<h2>MY SKILLS
-						<Image src='/img/skills/hands.png' className='skillsHands' alt='hands together holding' width={1247} height={647}/>
+						<Image src='/img/skills/hands.png' className='skillsHands' alt='hands together holding' width={500} height={259}/>
 						<div className='skill-title-bg-transparent'></div>
 						</h2>
 					</div>
