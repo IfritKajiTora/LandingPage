@@ -68,12 +68,12 @@
   animation: 0.2s pomaranczaShow2 forwards;
 }
 @keyframes pomaranczaShow{
-  0%{transform: rotate(30deg); left: -100%;}
-  100%{transform: rotate(5deg); left: -50px;}
+  0%{transform: rotate(30deg) translateX(-100%);}
+  100%{transform: rotate(5deg) translateX(-50px);}
 }
 @keyframes pomaranczaShow2{
-  0%{transform: rotate(5deg); left: -50px;}
-  100%{transform: rotate(30deg); left: -100%;}
+  0%{transform: rotate(5deg) translateX(-50px);}
+  100%{transform: rotate(30deg) translateX(-100%);}
 }
 
 .pomaranczaNapis{
