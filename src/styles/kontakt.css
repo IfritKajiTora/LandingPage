@@ -410,6 +410,7 @@
     text-align: left;
     display: flex;
     flex-flow: wrap-reverse;
+    justify-content: center;
 }
 .mobile-hover .mobile-icon{
     width: 65px;
@@ -481,5 +482,24 @@
   }
   100%{
     opaicty:0;
+  }
+}
+
+@media (max-width: 400px){
+  .mobile-hover .mobile-icon {
+    width: 50px;
+    margin: 10px;
+  }
+  .mobile-hover .mobile-element-icon {
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+  }
+  .mobile-hover .mobile-element-icon img {width: 35px;}
+  .mobile-hover .mobile-icon p { font-size: 13px;}
+}
+@media (max-width:327px){
+  .mobile-hover .mobile-icons{
+    justify-content: left;
   }
 }
