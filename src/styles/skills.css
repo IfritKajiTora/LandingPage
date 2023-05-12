@@ -309,8 +309,6 @@ transition: 0.3s;
   filter: saturate(1) brightness(1);
   transition-delay: 5.5s;
 }
-
-
 /*react*/
 #skills-title ~ .skill-1 {
   top: 52%;
@@ -376,7 +374,10 @@ transform: translate(calc(-142% - 80px), calc(-90% - 108px));
   }
 }
 @media (max-width:1050px){
-  #skills-title:hover ~ .skill-div{ transform: translate(-50%, -50%) scale(0.9); }
+  .skill-div{
+    scale: 0.9;
+  }
+  #skills-title:hover ~ .skill-div{ transform: translate(-55%, -50%); }
   #skills-title ~ .skill-1 {
     transform: translate(calc(167% - 80px), calc( 9% - 108px));
 }
@@ -430,6 +431,7 @@ transform: translate(calc(-142% - 80px), calc(-90% - 108px));
 }
 @media (max-width:600px){
   #skills-title ~ .skill-1 {
+    transform: translate(calc(115% - 80px),calc(15% - 108px));
     top: 50%;
     left: 0%;
   }
@@ -442,10 +444,12 @@ transform: translate(calc(-142% - 80px), calc(-90% - 108px));
     left: 0%;
   }
   #skills-title ~ .skill-4 {
+    transform: translate(calc(-113% - 80px),calc(150% - 108px));
     top: 0%;
     left: 100%;
   }
   #skills-title ~ .skill-5 {
+    transform: translate(calc(-116% - 80px),calc(14% - 108px));
     top: 50%;
     left: 100%;
   }
@@ -464,17 +468,29 @@ transform: translate(calc(-142% - 80px), calc(-90% - 108px));
     margin-top: 50px;
     margin-bottom: 50px;
   }
-  #skills-title:hover ~ .skill-div{ transform: translate(-50%, -50%) scale(0.8); }
+  .skill-div{
+    scale: 0.8;
+  }
+  #skills-title:hover ~ .skill-div{ transform: translate(-60%, -50%); }
   #skills-title ~ .skill-1{
-    transform: translate(calc(80% - 80px), calc( -4% - 108px));
+    transform: translate(calc(111% - 80px), calc( 5% - 108px));
+  }
+  #skills-title ~ .skill-3{
+    transform: translate(calc(88% - 80px), calc(182% - 108px));
+  }
+  #skills-title ~ .skill-4{
+    transform: translate(calc(-118% - 80px),calc(173% - 108px));
   }
   #skills-title ~ .skill-5{
-    transform: translate(calc(-55% - 80px), calc(14% - 108px));
+    transform: translate(calc(-136% - 80px), calc(14% - 108px))
   }
 }
 
 @media (max-width:400px){
-  #skills-title:hover ~ .skill-div{ transform: translate(-50%, -50%) scale(0.6); }
+  .skill-div{
+    scale: 0.6;
+  }
+  #skills-title:hover ~ .skill-div{ transform: translate(-80%, -50%); }
   .skills-padding {
     padding: 70px 50px;
   }
@@ -485,19 +501,27 @@ transform: translate(calc(-142% - 80px), calc(-90% - 108px));
     height: 300px;
   }
   #skills-title ~ .skill-2 {
-    transform: translate(calc(84% - 80px), calc(-68% - 108px));
+    transform: translate(calc(84% - 80px), calc(-149% - 108px));
   }
   #skills-title ~ .skill-3 {
-    transform: translate(calc(72% - 80px), calc(97% - 108px));
+    transform: translate(calc(99% - 80px), calc(141% - 108px));
 }
   #skills-title ~ .skill-4 {
-    transform: translate(calc(-66% - 80px), calc(101% - 108px));
+    transform: translate(calc(-158% - 80px), calc(137% - 108px));
 }
   #skills-title ~ .skill-6 {
-    transform: translate(calc(-71% - 80px), calc(-65% - 108px));
+    transform: translate(calc(-154% - 80px), calc(-137% - 108px));
   }
   .skill-allow-hover-on-all {
     height: 180px;
+  }
+}
+@media (max-width:240px){
+  .skill-div{
+    scale: 0.5;
+  }
+  #skills-title:hover ~ .skill-div {
+    transform: translate(-100%, -50%);
   }
 }
 
