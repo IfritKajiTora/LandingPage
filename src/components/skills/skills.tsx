@@ -13,13 +13,17 @@ export default function Skills(){
   return (
     <>
     <div className="skills-padding">
-    <div className={`skills-content ${skillsVisible ? 'visible' : ''}`} ref={skillsObserver}>
-					<div id="skills-title">
-						<h2>MY SKILLS
+    	<div className={`skills-content ${skillsVisible ? 'visible' : ''}`} ref={skillsObserver}>
+				<div id="skills-title">
+					<h2>MY SKILLS
 						<Image src='/img/skills/hands.png' className='skillsHands' alt='hands together holding' width={500} height={259}/>
 						<div className='skill-title-bg-transparent'></div>
-						</h2>
-					</div>
+						<div className='skill-allow-hover-on-all'>
+							<div className='hold-hover'></div>
+						</div>
+					</h2>
+				</div>
+				
 
 					<SingleSkill 
 						skillNumber={1} 
@@ -81,7 +85,7 @@ export default function Skills(){
 						rate={3}
 					/>
 
-						<Hidden7thSkill/>
+					<Hidden7thSkill/>
 
 	      </div>
       </div>

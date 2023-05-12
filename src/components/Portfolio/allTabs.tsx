@@ -30,17 +30,15 @@ export default function Tabs() {
       </div>
 
       <div ref={portfolioRef} className={`pt-[50px] ${portfolioVisible ? 'visible' : ''}`}>
-
-          <div className='tab tab-visible'>
-          
-            <div className='grid md:grid-cols-2 xl:grid-cols-3 gap-4 relative'>
-              {tab == 'woocommerce' && <Woocommerce/>}
-              {tab == 'react/next' && <ReactNext/>}
-              {tab == 'wordpress' && <Wordpress/>}
-              {tab == 'html/css' && <HtmlCss/>}
-            </div>
+        <div className='tab tab-visible'>
+          <div className='grid md:grid-cols-2 xl:grid-cols-3 gap-4 relative'>
+            {portfolioVisible && tab == 'woocommerce' && <Woocommerce/>}
+            {portfolioVisible && tab == 'react/next' && <ReactNext/>}
+            {portfolioVisible && tab == 'wordpress' && <Wordpress/>}
+            {portfolioVisible && tab == 'html/css' && <HtmlCss/>}
           </div>
         </div>
+      </div>
     </>
   )
 }
