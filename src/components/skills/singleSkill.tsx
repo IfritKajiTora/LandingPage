@@ -20,7 +20,7 @@ export default function Skill(props: skill) {
   const dotEmptyArray = Array(dotEmpty).fill(null)
 
   return (
-    <div className={`skill-${props.skillNumber} skill-div`}>
+    <div className={`skill-${props.skillNumber} skill-div`} title={props.title}>
 			<Image className="skill-icon" src={props.skillIcon} 
 				width={props.iconWidth} height={props.iconHeight} 
 				alt={props.iconAlt}

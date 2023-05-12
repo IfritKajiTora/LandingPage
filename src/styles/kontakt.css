@@ -1,11 +1,11 @@
 .phoneAnimate{
-  transform: scale(0.5);
+  transform: perspective(100px) translateZ(-50px);
   opacity: 0;
   transition: 1s;
   pointer-events: none;
 }
 .visible.phoneAnimate{
-  transform: scale(1);
+  transform: perspective(100px) translateZ(0px);
   opacity: 1;
   pointer-events: all;
 }
@@ -75,20 +75,32 @@
   background-color: #000000;
   border:solid 5px #64636a;
   position: relative;
+  will-change: border, border-left, border-right, border-top, border-bottom;
+}
+.mobile-background-div{
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 25px;
 }
 .mobile-background{
-  border-radius: 25px;
   position: absolute;
-  width: 100%;
+  width: auto;
+  aspect-ratio: 16 / 11;
   height: 100%;
-  left:0;
-  right:0;
+  max-width: none;
+  left: 0;
+  right: 0;
   object-fit: cover;
   object-position: left center;
+  transform: translateX(0%);
   transition: 1s;
 }
 .mobile-hover:hover .mobile-background{
-  object-position: center center;
+  transform: translateX(-25%);
 }
 .mobile-design.mobile-background-hide .mobile-background{
   transition: 0s;
@@ -118,35 +130,37 @@
     width: calc(100% + 12px);
     height: calc(100% + 12px);
     position: absolute;
-    top: -6px;
-    left: -6px;
+    top: 0px;
+    left: 0px;
+    transform: translate(-6px,-6px);
     border-radius: 20px 20px 20px 20px;
     padding-bottom: 0px;
     overflow: hidden;
     transition: 1s;
     pointer-events: none;
+    will-change: height, border-radius;
 }
 .mobile-hover:hover .silver-shine-div{
     height: calc(100% + 0px);
-    top: 0;
-    left: 0;
+    transform: translate(0px, 0px);
     border-radius: 25px 25px 25px 12px;
 }
 .mobile-hover .silver-shine{
   box-shadow: 0px 0px 3px 1px #cbcbcb;
     position: absolute;
-    top: 6px;
-    left: 6px;
+    top: 0px;
+    left: 0px;
+    transform: translate(6px,6px);
     height: calc(100% - 12px);
     width: calc(100% - 12px);
     overflow: hidden;
     border-radius: 20px 20px 20px 20px;
     transition: 1s;
+    will-change: border-radius, height, width;
 }
 .mobile-hover:hover .silver-shine{
   box-shadow: 3px 0px 12px #cbcbcb;
-    top: 0;
-    left: 0;
+    transform: translate(0px,0px);
     height: calc(100% - 0px);
     width: calc(100% - 12px);
     border-radius: 25px 25px 25px 12px;
@@ -156,8 +170,9 @@
     transition: 1s;
     position: absolute;
     top: 15%;
-    right: -8px;
+    right: 0;
     width: 0px;
+    transform: translateX(8px);
     border-left: solid 4px #565656;
     border-top: solid 2px #565656;
     border-right: solid 0px #565656;
@@ -167,6 +182,7 @@
     height: 60px;
     border-radius: 0 2px 2px 0;
     cursor: pointer;
+    will-change: border-radius, width, border, border-left, border-right, border-top, border-bottom;
 }
 .mobile-button-side.third{
   height:40px;
@@ -174,7 +190,7 @@
 .mobile-hover:hover .mobile-button-side{
   border-radius: 50px 70px 50px 70px;
     width: 11px;
-    right: -13px;
+    transform: translateX(13px);
     border-left: solid 3px #565656;
     border-top: solid 0px #565656;
     border-right: solid 0px #565656;
@@ -187,8 +203,8 @@
   top: calc(15% + 180px);
 }
 .mobile-hover:hover .mobile-button-side:active{
-  right:-12px;
   width: 9px;
+  transform: translateX(12px);
   border-left:solid 1px #565656;
   transition: 0s;
 }
@@ -360,7 +376,7 @@
   transition: 1s;
   transform: translateZ(0px);
 }
-.mobile-hover:hover .mobile-search-div{
+/*.mobile-hover:hover .mobile-search-div{
   transform-style: preserve-3d;
   transition: 1s;
   transform: translateZ(60px);
@@ -383,7 +399,8 @@
   filter:drop-shadow(10px 5px 5px rgba(0,0,0,0.6));
   transform: translateZ(10px);
   transition: 0.3s;
-}
+}*/
+
 .mobile-hover .mobile-icons{
   margin-left: -15px;
     margin-right: -15px;
@@ -409,7 +426,6 @@
   text-shadow: 0 1px black, 1px 0 black, -1px 0 black, 0 -1px black, 0px 0px 0px black;
   margin-top: 5px;
     word-break: break-word;
-    /*height: 30px;*/
     transform: translateZ(0px);
     transform-style: preserve-3d;
     transition: 1s;
@@ -429,16 +445,14 @@
 }
 .mobile-hover .mobile-element-icon{
   position: relative;
-  /*background-color:#016ad7;*/
   background-image: linear-gradient(45deg,var(--primary) 40%,#aee0e5);
   border-radius: 15px;
   width:65px;
   height:65px;
   transform: translateZ(0px);
-    transform-style: preserve-3d;
-    transition: 1s;
-    box-shadow: 0px 0px 0px rgba(0,0,0,1);
-
+  transform-style: preserve-3d;
+  transition: 1s;
+  box-shadow: 0px 0px 0px rgba(0,0,0,1);
 }
 .mobile-hover:hover .mobile-element-icon{
   transform: translateZ(60px);

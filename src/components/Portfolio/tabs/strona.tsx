@@ -14,7 +14,7 @@ type Strona = {
 export default function Strona(props: Strona) {
   return (
     <>
-      <div className='portfolioSiteAnimate' style={{transitionDelay: `${(props.delay * 0.2).toFixed(1)}s`}}>
+      <div className='portfolioSiteAnimate' style={{animationDelay: `${(props.delay * 0.2).toFixed(1)}s`}}>
         <div className='portfolioWebsite'>
           <Image src={props.bgImage} className='portfolioImage' width={500} height={334} alt={props.title} />
           <a href={props.link} className='portfolioLink' 

@@ -56,8 +56,6 @@ html{
   scroll-padding-top: 0px;
 }
 html,body{
-  /*width: 100%;
-  max-width: 100vw;*/
   margin: 0px;
   padding: 0px;
   background-color: var(--bodyBackgroundColor);
@@ -65,9 +63,7 @@ html,body{
 body{
   overflow-x: hidden;
 }
-/*body{ 
-  display: block;
-}*/
+
 .container{
   margin-left:auto;
   margin-right:auto;
@@ -79,10 +75,18 @@ body{
   color: white;
   margin-top: 0;
   margin-bottom: 30px;
-  /*background: -webkit-linear-gradient(45deg,#fff, var(--primary), #ffffff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;*/
+}
+.bannerTitle{
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  line-height: 1.1;
+  color: white;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+.bannerText{
+  font-size: clamp(1.2rem, 2vw, 2rem);
+  color:white;
+  opacity: 0.8;
 }
 .text{
   font-size: clamp(1rem, 2vw, 1.6rem);
@@ -98,6 +102,19 @@ body{
   .section100vh{
     min-height: 100vh;
   }
+}
+
+.bg-radiant-gradient{
+  display: block;
+  width: 175%;
+  height: 175%;
+  height: auto;
+  aspect-ratio: 1/1;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  background-image: radial-gradient(rgb(167 164 191 / 30%), transparent 70%);
 }
 
 /*FOR LIGHT VERSION*/

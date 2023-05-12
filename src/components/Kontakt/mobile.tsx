@@ -19,7 +19,9 @@ export default function Mobile() {
     <>
 			<div className={`phoneAnimate ${phoneVisible ? 'visible' : ''}`} ref={phoneRef}>
 				<div className={`mobile-design ${phoneScreen ? 'mobile-background-hide' : ''}`}>
-					<Image className='mobile-background' src='/img/kontakt/mobile-background.jpg' alt='phone background image mountains' width={951} height={634}/>
+					<div className='mobile-background-div'>
+						<Image className='mobile-background' src='/img/kontakt/mobile-background.jpg' alt='phone background image mountains' width={951} height={634}/>
+					</div>
 				<div className='obramowanie'></div>
 				<div className='silver-shine-div'>
 					<div className='silver-shine'></div>

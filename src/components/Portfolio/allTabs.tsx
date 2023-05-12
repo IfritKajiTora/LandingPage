@@ -1,10 +1,20 @@
 'use client'
 import React, {useState} from 'react'
 import { useInView } from 'react-intersection-observer'
-import TabWordpressWoocommerce from './tabs/tabWordpressWoocommerce'
-import TabReactNext from './tabs/tabReactNext'
-import TabWordpress from './tabs/tabWordpress'
-import TabHtmlCss from './tabs/tabHtmlCss'
+import dynamic from'next/dynamic'
+
+const Woocommerce = dynamic(() => import('@/components/Portfolio/tabs/tabWordpressWoocommerce'), {
+  ssr:false, loading: () => <p className='text-center title absolute left-0 right-0 top-0 animate-pulse'>LOADING</p>
+})
+const Wordpress = dynamic(() => import('@/components/Portfolio/tabs/tabWordpress'), {
+  ssr:false, loading: () => <p className='text-center title absolute left-0 right-0 top-0 animate-pulse'>LOADING</p>
+})
+const ReactNext = dynamic(() => import('@/components/Portfolio/tabs/tabReactNext'), {
+  ssr:false, loading: () => <p className='text-center title absolute left-0 right-0 top-0 animate-pulse'>LOADING</p>
+})
+const HtmlCss = dynamic(() => import('@/components/Portfolio/tabs/tabHtmlCss'), {
+  ssr:false, loading: () => <p className='text-center title absolute left-0 right-0 top-0 animate-pulse'>LOADING</p>
+})
 
 export default function Tabs() {
   const {ref: portfolioRef , inView: portfolioVisible} = useInView({threshold: 0.5, triggerOnce:true});
@@ -21,30 +31,16 @@ export default function Tabs() {
 
       <div ref={portfolioRef} className={`pt-[50px] ${portfolioVisible ? 'visible' : ''}`}>
 
-        <div className={`tab ${tab == 'react/next' ? 'tab-visible' : 'tab-hide'}`}>
-          <div className='grid md:grid-cols-2 xl:grid-cols-3 gap-4'>
-            <TabReactNext/>
+          <div className='tab tab-visible'>
+          
+            <div className='grid md:grid-cols-2 xl:grid-cols-3 gap-4 relative'>
+              {tab == 'woocommerce' && <Woocommerce/>}
+              {tab == 'react/next' && <ReactNext/>}
+              {tab == 'wordpress' && <Wordpress/>}
+              {tab == 'html/css' && <HtmlCss/>}
+            </div>
           </div>
         </div>
-
-        <div className={`tab ${tab == 'woocommerce' ? 'tab-visible' : 'tab-hide'}`}>
-          <div className='grid md:grid-cols-2 xl:grid-cols-3 gap-4'>
-            <TabWordpressWoocommerce/>
-          </div>
-        </div>
-
-        <div className={`tab ${tab == 'wordpress' ? 'tab-visible' : 'tab-hide'}`}>
-          <div className='grid md:grid-cols-2 xl:grid-cols-3 gap-4'>
-            <TabWordpress/>
-          </div>
-        </div>
-
-        <div className={`tab ${tab == 'html/css' ? 'tab-visible' : 'tab-hide'}`}>
-          <div className='grid md:grid-cols-2 xl:grid-cols-3 gap-4'>
-            <TabHtmlCss/>
-          </div>
-        </div>
-      </div>
     </>
   )
 }

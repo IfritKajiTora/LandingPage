@@ -33,7 +33,7 @@
 }
 
 #skills-title{
-  transform: scale(0.5);
+  transform: perspective(100px) translateZ(-50px);
   opacity: 0;
   align-self: center;
   color: white;
@@ -44,7 +44,7 @@
   pointer-events: none;
 }
 .visible #skills-title{
-  transform: scale(1);
+  transform: perspective(100px) translateZ(0px);
   opacity: 1;
   pointer-events: all;
 }
@@ -54,11 +54,7 @@
   transition: 1s;
   position: relative;
    font-size: clamp(42px, 5vw, 72px);
-   text-shadow: 
-   0 0 10px #fff, 
-   0 0 42px var(--primary), 
-   0 0 92px var(--primary), 
-   0 0 151px var(--primary);
+   text-shadow: 0 0 63px var(--primary);
   animation: pulsate 0.11s ease-in-out infinite alternate;
 }
 .skill-title-bg-transparent{
@@ -73,7 +69,7 @@
   background-image: radial-gradient(rgb(167 164 191 / 30%), transparent 70%);
 }
 #skills-title:hover{
-  transform: scale(2);
+  transform: perspective(100px) translateZ(50px);
   width: calc(50% + 180px);
   height: 450px;
   display: flex;
@@ -85,18 +81,10 @@
 }
 @keyframes pulsate {
 100% {
-    text-shadow:
-    0 0 11px #fff,
-    0 0 40px var(--primary),
-    0 0 90px var(--primary),
-    0 0 150px var(--primary);
+  text-shadow: 0 0 63px var(--primary);
 }
 0% {
-  text-shadow:
-    0 0 10px #fff,
-    0 0 38px var(--primary),
-    0 0 80px var(--primary),
-    0 0 140px var(--primary);
+  text-shadow: 0 0 53px var(--primary);
   }
 }
 
@@ -207,12 +195,10 @@ transition: 0.01s 0s;
   text-align: center;
   color:White;
   position: absolute;
-  top: 50%;
-  left: 50%;
   opacity: 0;
   transition: 1s;
-  transform: translate(-50%, -50%);
 }
+
 #skills-title:hover ~ .skill-div,
 #skills-title:hover ~ .skill-div .skillTitle,
 #skills-title:hover ~ .skill-div .skillDots{
@@ -301,136 +287,148 @@ transition: 0.3s;
   filter: saturate(1) brightness(1);
   transition-delay: 5.5s;
 }
+
+
 /*react*/
-#skills-title:hover ~ .skill-1{
-top:52%;
-left:0;
+#skills-title ~ .skill-1 {
+  top: 52%;
+  left: 0;
+  transform: translate(calc(391% - 80px), calc( 10% - 108px));
 }
+
 /*next*/
-#skills-title:hover ~ .skill-2{
+#skills-title ~ .skill-2{
 top:100%;
 left:31%;
+transform: translate(calc(138% - 80px), calc(-100% - 108px));
 }
 /*html css*/
-#skills-title:hover ~ .skill-3{
+#skills-title ~ .skill-3{
 top:5%;
 left:28%;
+transform: translate(calc(144% - 80px), calc(140% - 108px));
 }
 /*JS*/
-#skills-title:hover ~ .skill-4{
+#skills-title ~ .skill-4{
 top:0%;
 left:67%;
+transform: translate(calc(-66% - 80px), calc(150% - 108px));
 }
 /*Wordpress*/
-#skills-title:hover ~ .skill-5{
+#skills-title ~ .skill-5{
 top:43%;
 left:100%;
+transform: translate(calc(-387% - 80px), calc(43% - 108px));
 }
 /*TypeScript*/
-#skills-title:hover ~ .skill-6{
+#skills-title ~ .skill-6{
 top:95%;
 left:71%;
+transform: translate(calc(-142% - 80px), calc(-90% - 108px));
 }
 /*Doom Slayer*/
-#skills-title:hover ~ .skill-7{
+#skills-title ~ .skill-7{
   top: 49%;
   left: 49%;
+  transform: translate(calc(20% - 108px), calc(20% - 108px));
 }
+#skills-title:hover ~ .skill-div{ transform: translate(-50%, -50%); }
 
 @media (max-width: 1280px){
   .skills-padding{
     padding: 96px;
   }
-  /*html css*/
-  #skills-title:hover ~ .skill-3{
-    top: 5%;
-    left: 20%;
+  #skills-title ~ .skill-1{
+    transform: translate(calc(250% - 80px), calc( -4% - 108px));
   }
   /*JS*/
-  #skills-title:hover ~ .skill-4{
+  #skills-title ~ .skill-4{
     top: 0%;
     left: 70%;
   }
-  /*Wordpress*/
-  #skills-title:hover ~ .skill-5{
-    top: 47%;
-    left: 100%;
-  }
+  #skills-title ~ .skill-5{transform: translate(calc(-250% - 80px), calc(14% - 108px));}
   /*TypeScript*/
-  #skills-title:hover ~ .skill-6{
+  #skills-title ~ .skill-6{
     top: 95%;
     left: 76%;
   }
-  /*Doom Slayer*/
-  #skills-title:hover ~ .skill-7{
-      top: 46%;
-      left: 49%;
-  }
 }
 @media (max-width:1050px){
-  .skill-div{
-    transform: translate(-50%, -50%) scale(0.8) !important;
+  #skills-title:hover ~ .skill-div{ transform: translate(-50%, -50%) scale(0.9); }
+  #skills-title ~ .skill-1 {
+    transform: translate(calc(167% - 80px), calc( 9% - 108px));
+}
+  #skills-title ~ .skill-2 {
+    top: 100%;
+    left: 21%;
+    transform: translate(calc(84% - 80px), calc(-132% - 108px));
   }
-    #skills-title:hover ~ .skill-2 {
-      top: 100%;
-      left: 14%;
-  }
-    #skills-title:hover ~ .skill-3 {
+  #skills-title ~ .skill-3 {
     top: 5%;
     left: 15%;
   }
+  #skills-title ~ .skill-5 {
+    transform: translate(calc(-162% - 80px), calc(38% - 108px));
 }
-@media (max-width:800px){
-  #skills-title:hover ~ .skill-1 {
-    top: 51%;
-    left: 0;
-  }
-  #skills-title:hover ~ .skill-4 {
-    top: 0%;
-    left: 89%;
-  }    
-  #skills-title:hover ~ .skill-7{
-    top: 48%;
-    left: 50%;
+  #skills-title ~ .skill-6 {
+    transform: translate(calc(-91% - 80px), calc(-122% - 108px));
   }
 }
 @media (max-width:767px){
-  #skills-title:hover ~ .skill-2 {
+  #skills-title ~ .skill-1{
+    top: 51%;
+    left: 0;
+    transform: translate(calc(144% - 80px), calc( -4% - 108px));
+  }
+  #skills-title ~ .skill-2 {
     top: 100%;
     left: 10%;
   }
-  #skills-title:hover ~ .skill-3 {
+  #skills-title ~ .skill-3 {
     top: 5%;
     left: 10%;
   }
-  #skills-title:hover ~ .skill-4 {
+  #skills-title ~ .skill-4 {
     top: 0%;
     left: 90%;
   }
-  #skills-title:hover ~ .skill-6 {
+  #skills-title ~ .skill-5{
+    top: 46%;
+    left: 100%;
+    transform: translate(calc(-155% - 80px), calc(14% - 108px));
+  }
+  #skills-title ~ .skill-6 {
     top: 95%;
     left: 90%;
   }
-  #skills-title:hover ~ .skill-7{
+  #skills-title ~ .skill-7{
     top: 32%;
     left: 53%;
   }
 }
 @media (max-width:600px){
-  #skills-title:hover ~ .skill-2 {
+  #skills-title ~ .skill-1 {
+    top: 50%;
+    left: 0%;
+  }
+  #skills-title ~ .skill-2 {
     top: 100%;
     left: 0%;
   }
-  #skills-title:hover ~ .skill-3 {
-    top: 5%;
+  #skills-title ~ .skill-3 {
+    top: 0%;
     left: 0%;
   }
-  #skills-title:hover ~ .skill-4 {
+  #skills-title ~ .skill-4 {
     top: 0%;
     left: 100%;
   }
-  #skills-title:hover ~ .skill-6 {
-    top: 95%;
+  #skills-title ~ .skill-5 {
+    top: 50%;
+    left: 100%;
+  }
+  #skills-title ~ .skill-6 {
+    top: 100%;
     left: 100%;
   }
   .skill-7, .hidden-skill-div{
@@ -444,15 +442,17 @@ left:71%;
     margin-top: 50px;
     margin-bottom: 50px;
   }
-  .skill-div{
-    transform: translate(-50%, -50%) scale(0.7) !important;
+  #skills-title:hover ~ .skill-div{ transform: translate(-50%, -50%) scale(0.8); }
+  #skills-title ~ .skill-1{
+    transform: translate(calc(80% - 80px), calc( -4% - 108px));
+  }
+  #skills-title ~ .skill-5{
+    transform: translate(calc(-55% - 80px), calc(14% - 108px));
   }
 }
 
-@media (max-width:360px){
-  .skill-div{
-    transform: translate(-50%, -50%) scale(0.5) !important;
-  }
+@media (max-width:400px){
+  #skills-title:hover ~ .skill-div{ transform: translate(-50%, -50%) scale(0.6); }
   .skills-padding {
     padding: 70px 50px;
   }
@@ -461,6 +461,18 @@ left:71%;
   }
   #skills-title:hover{
     height: 300px;
+  }
+  #skills-title ~ .skill-2 {
+    transform: translate(calc(84% - 80px), calc(-68% - 108px));
+  }
+  #skills-title ~ .skill-3 {
+    transform: translate(calc(72% - 80px), calc(97% - 108px));
+}
+  #skills-title ~ .skill-4 {
+    transform: translate(calc(-66% - 80px), calc(101% - 108px));
+}
+  #skills-title ~ .skill-6 {
+    transform: translate(calc(-71% - 80px), calc(-65% - 108px));
   }
 }
 
@@ -511,14 +523,15 @@ left:71%;
   position: absolute;
   left:0;
   right: 0;
-  top:50%;
+  top:100%;
+  transform: translateY(-100%);
   margin-top:5px;
   transition: 1s;
 }
 .hidden-skill-div:hover p{
   left:0;
   right: 0;
-  top:100%;
+  transform: translateY(0%);
   opacity: 1;
 }
 .hidden-skill-div.active-hidden-div{
