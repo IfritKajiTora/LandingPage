@@ -63,44 +63,52 @@
   top:0;
   left:0;
   text-decoration: none;
-  padding:15px;
+  padding:1rem;
   align-self: center;
 }
 
-.portfolioWebsite .portfolioLink .divContent{
+.portfolioWebsite .portfolioLink{
   margin:auto;
-  position: relative;
-  transform: translateY(100px);
+  position: absolute;
+  transform: translateY(100%);
   opacity: 0;
   transition: 0.3s;
   white-space: pre-line;
 }
-.portfolioWebsite:hover .portfolioLink .divContent{
+.portfolioWebsite:hover .portfolioLink{
   opacity: 1;
   transform: translateY(0px);
 }
 .portfolioLink .portfolioTitle{
-  font-size: clamp(22px, 5vw, 30px);
+  font-size: clamp(1.2rem, 4vw, 1.9rem);
   color:white;
   display: block;
   line-height: 1.1;
-  margin-bottom:15px;
+  margin-bottom:1rem;
   text-shadow: 1px 0 black, 0 1px black, -1px 0 black, 0 -1px black;
+  font-weight: 600;
 }
-
+.divContent{
+  margin:auto;
+}
 .portfolioLink .portfolioInfo{
-  font-size: clamp(17px, 3vw, 20px);
+  font-size: clamp(1rem, 4vw, 1.25rem);
   color:white;
   display: block;
   text-shadow: 1px 0 black, 0 1px black, -1px 0 black, 0 -1px black;
+}
+@media (max-width: 320px){
+  .portfolioLink .portfolioInfo{
+    line-height: 1.1;
+  }
 }
 
 .linkTab{
   display: inline-block;
-  font-size: clamp(20px, 6vw, 32px);
+  font-size: clamp(1rem, 6vw, 2rem);
   position: relative;
   cursor: pointer;
-  padding: 20px 15px;
+  padding: 1.5rem 1rem;
   transition: 1s;
   text-shadow: none;
   font-weight: 600;

@@ -42,6 +42,7 @@
   transition: 1s;
   z-index: 1;
   pointer-events: none;
+  font-weight: 600;
 }
 .visible #skills-title{
   transform: perspective(100px) translateZ(0px);
@@ -53,7 +54,7 @@
   margin: auto;
   transition: 1s;
   position: relative;
-   font-size: clamp(42px, 5vw, 72px);
+   font-size: clamp(2.2rem, 5vw, 4.6rem);
    text-shadow: 0 0 63px var(--primary);
   animation: pulsate 0.11s ease-in-out infinite alternate;
 }
@@ -121,8 +122,8 @@
 }
 .skillDotEmpty, .skillDotFill {
   display: inline-block;
-  width: 15px;
-  height: 15px;
+  width: 0.9rem;
+  height: 0.9rem;
   border-radius: 15px;
   margin: 3px;
 }
@@ -149,7 +150,7 @@
   outline: solid 1px #6db8d1;
 }
 .skillTitle {
-  font-size: 24px !important;
+  font-size: 1.5rem !important;
   font-weight: 600;
   margin-bottom: 0px;
   margin-top: 10px;
@@ -159,7 +160,7 @@
   transform: translateY(-100%);
 }
 .skillLevel {
-  font-size: 20px !important;
+  font-size: 1.3rem !important;
   opacity: 0.7;
   margin-top: 0px;
   margin-bottom: 13px;
@@ -565,7 +566,7 @@ transform: translate(calc(-142% - 80px), calc(-90% - 108px));
   opacity: 0.5;
 }
 .hidden-skill-div p{
-  font-size: 14px;
+  font-size: 0.87rem;
   line-height: 1;
   color: red;
   opacity: 0;

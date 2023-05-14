@@ -73,11 +73,11 @@
   transition: 1s;
   box-shadow: 15px 15px 15px rgba(0,0,0,0.7);
   background-color: #000000;
-  border:solid 5px #64636a;
+  /*border:solid 5px #64636a;*/
   position: relative;
-  will-change: border, border-left, border-right, border-top, border-bottom;
 }
 .mobile-background-div{
+  background-color: black;
   overflow: hidden;
   position: absolute;
   top: 0;
@@ -109,10 +109,10 @@
 .mobile-hover:hover .mobile-design{
   transform: perspective(700px) rotateY(-25deg) rotateX(8deg) rotateZ(8deg);
   box-shadow: 40px 40px 40px rgba(0,0,0,0.7);
-  border-bottom: solid 4px #64636a;
+  /*border-bottom: solid 4px #64636a;
     border-left: solid 0px #64636a;
     border-top: solid 2px #64636a;
-    border-right: solid 12px #64636a;
+    border-right: solid 12px #64636a;*/
 }
 .mobile-hover .obramowanie{
   position: absolute;
@@ -141,9 +141,9 @@
     will-change: height, border-radius;
 }
 .mobile-hover:hover .silver-shine-div{
-    height: calc(100% + 0px);
+    height: calc(100% + 4px);
     transform: translate(0px, 0px);
-    border-radius: 25px 25px 25px 12px;
+    border-radius: 25px 25px 25px 30px;
 }
 .mobile-hover .silver-shine{
   box-shadow: 0px 0px 3px 1px #cbcbcb;
@@ -165,24 +165,40 @@
     width: calc(100% - 12px);
     border-radius: 25px 25px 25px 12px;
 }
+.phone-border{
+  position: absolute;
+  left: 0px;
+  top: 0;
+  width: calc(100% + 10px);
+  height: calc(100% + 10px);
+  background-color: #64636a;
+  transform: translate(-5px, -5px);
+  border-radius: 25px;
+  transition: 1s;
+}
+.mobile-hover:hover .phone-border{
+  transform: translate(0px, -2px);
+  height: calc(100% + 6px);
+}
 /*SIDE*/
 .mobile-button-side{
     transition: 1s;
     position: absolute;
     top: 15%;
     right: 0;
-    width: 0px;
+    width: 4px;
     transform: translateX(8px);
-    border-left: solid 4px #565656;
+    /*border-left: solid 4px #565656;
     border-top: solid 2px #565656;
     border-right: solid 0px #565656;
     border-bottom: solid 2px #565656;
     background-color: #818181;
-    background-image: linear-gradient(270deg, #6f6e75, #a3a3a6);
+    background-image: linear-gradient(270deg, #6f6e75, #a3a3a6);*/
+    background-color:#565656;
     height: 60px;
     border-radius: 0 2px 2px 0;
     cursor: pointer;
-    will-change: border-radius, width, border, border-left, border-right, border-top, border-bottom;
+    will-change: border-radius, width;
 }
 .mobile-button-side.third{
   height:40px;
@@ -191,13 +207,37 @@
   border-radius: 50px 70px 50px 70px;
     width: 11px;
     transform: translateX(13px);
-    border-left: solid 3px #565656;
+    overflow: hidden;
+    /*border-left: solid 3px #565656;
     border-top: solid 0px #565656;
     border-right: solid 0px #565656;
-    border-bottom: solid 2px #565656;
+    border-bottom: solid 2px #565656;*/
 }
 .mobile-button-side.second{
   top: calc(15% + 70px);
+}
+.mobile-button-side:after{
+  content: '';
+  background-color: #818181;
+  background-image: linear-gradient(270deg, #6f6e75, #a3a3a6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 1s;
+  transform: translate(3px, 1px);
+  width: calc(100% - 4px);
+  height: calc(100% - 2px);
+}
+.mobile-hover:hover .mobile-button-side:after{
+  width: calc(100% - 5px);
+  height: calc(100% - 3px);
+  transform: translate(3px, 1px);
+  border-radius: 50px 70px 50px 70px;
+  width: calc(100% - 4px);
+  height: calc(100% - 2px);
+  transform: translate(4px, 1px);
+  border-radius: 50px 70px 50px 70px;
+  transition: 0s;
 }
 .mobile-button-side.third{
   top: calc(15% + 180px);
@@ -205,7 +245,10 @@
 .mobile-hover:hover .mobile-button-side:active{
   width: 9px;
   transform: translateX(12px);
-  border-left:solid 1px #565656;
+  transition: 0s;
+}
+.mobile-hover:hover .mobile-button-side:active:after{
+  transform: translate(1px, 1px);
   transition: 0s;
 }
 .mobile-hover:hover .mobile-button-side:hover{
@@ -326,7 +369,7 @@
   font-family: sans-serif !important;
 }
 .mobile-hover .mobile-date .timeContent{
-  font-size:clamp(28px, 10vw, 42px);
+  font-size: clamp(1rem, 10vw, 2.6rem);
   margin-bottom:0;
   font-weight: lighter;
   transition: 1s;
@@ -334,7 +377,7 @@
   transform-style: preserve-3d;
 }
 .mobile-hover .mobile-date .dateContent{
-  font-size:clamp(13px, 4.2vw, 18px);
+  font-size: clamp(0.6rem, 4.2vw, 1.1rem);
 }
 .mobile-hover:hover .mobile-date{
   transform: translateZ(60px);
@@ -354,17 +397,17 @@
   transform: translateZ(0px);
   transform-style: preserve-3d;
 }
-.mobile-hover .mobile-searchbar{
+/*.mobile-hover .mobile-searchbar{
   height: 45px;
-    background-color: rgba(255,255,255,0.7);
-    border-radius: 50px;
-    transition: 1s;
-    box-shadow: 1px 1px 1px rgba(0,0,0,0.6);
-    transform: translateZ(0px);
-    transform-style: preserve-3d;
-    backdrop-filter: blur(5px);
-    padding: 10px;
-    position: relative;
+  background-color: rgba(255,255,255,0.7);
+  border-radius: 50px;
+  transition: 1s;
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+  transform: translateZ(0px);
+  transform-style: preserve-3d;
+  backdrop-filter: blur(5px);
+  padding: 0.8rem;
+  position: relative;
 }
 .mobile-hover .mobile-search-div img{
   height:30px;
@@ -376,7 +419,7 @@
   transition: 1s;
   transform: translateZ(0px);
 }
-/*.mobile-hover:hover .mobile-search-div{
+.mobile-hover:hover .mobile-search-div{
   transform-style: preserve-3d;
   transition: 1s;
   transform: translateZ(60px);

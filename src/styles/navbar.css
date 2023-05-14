@@ -26,15 +26,15 @@
   transition: 0.5s;
 }
 .navbarList li{
-  margin: 10px;
-  padding: 0px 20px;
+  margin: 0.8rem;
+  padding: 0px 1.2rem;
   display: inline-block;
 }
 
 @media (max-width:767px){
   .navbarList li{
-    margin: 10px 0px;
-    padding: 0px 15px;
+    margin: 0.8rem 0px;
+    padding: 0px 1rem;
   }
 }
 
@@ -73,14 +73,14 @@
 .sectionIcon{
   position:relative;
   display: inline-block;
-  font-size: clamp(20px, 2vw, 28px);
+  font-size: clamp(1.2rem, 2vw, 2rem);
   margin-bottom: 5px;
   margin-top: 5px;
   opacity: 0.5;
 }
 .sectionName{
   position:relative;
-  font-size: clamp(16px, 2vw, 21px);
+  font-size: clamp(1rem, 2vw, 1.3rem);
 }
 
 .hamburgerNav{
