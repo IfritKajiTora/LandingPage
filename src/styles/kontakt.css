@@ -152,10 +152,10 @@
 }
 .mobile-hover:hover .silver-shine{
   box-shadow: 3px 0px 12px #cbcbcb;
-    transform: translate(0px,0px);
-    height: calc(100% - 0px);
-    width: calc(100% - 12px);
-    border-radius: 25px 25px 25px 12px;
+  transform: translate(0px,0px);
+  height: calc(100% - 0px);
+  width: calc(100% - 12px);
+  border-radius: 25px 25px 25px 12px;
 }
 .phone-border{
   position: absolute;
@@ -167,6 +167,7 @@
   transform: translate(-5px, -5px);
   border-radius: 25px;
   transition: 1s;
+  pointer-events: none;
 }
 .mobile-hover:hover .phone-border{
   transform: translate(0px, -2px);
@@ -174,25 +175,25 @@
 }
 /*SIDE*/
 .mobile-button-side{
-    transition: 1s;
-    position: absolute;
-    top: 15%;
-    right: 0;
-    width: 4px;
-    transform: translateX(8px);
-    background-color:#565656;
-    height: 60px;
-    border-radius: 0 2px 2px 0;
-    cursor: pointer;
+  transition: 1s;
+  position: absolute;
+  top: 15%;
+  right: 0;
+  width: 4px;
+  transform: translateX(8px);
+  background-color:#565656;
+  height: 60px;
+  border-radius: 0 2px 2px 0;
+  cursor: pointer;
+  overflow: hidden;
 }
 .mobile-button-side.third{
   height:40px;
 }
 .mobile-hover:hover .mobile-button-side{
-  border-radius: 50px 70px 50px 70px;
-    width: 11px;
-    transform: translateX(13px);
-    overflow: hidden;
+  border-radius: 50px 70px 60px 50px;
+  width: 11px;
+  transform: translateX(13px);
 }
 .mobile-button-side.second{
   top: calc(15% + 70px);
@@ -208,32 +209,29 @@
   transform: translate(3px, 1px);
   width: calc(100% - 4px);
   height: calc(100% - 2px);
+  pointer-events: none;
 }
 .mobile-hover:hover .mobile-button-side:after{
-  width: calc(100% - 5px);
-  height: calc(100% - 3px);
-  transform: translate(3px, 1px);
-  border-radius: 50px 70px 50px 70px;
-  width: calc(100% - 4px);
-  height: calc(100% - 2px);
-  transform: translate(4px, 1px);
-  border-radius: 50px 70px 50px 70px;
-  transition: 0s;
+  border-radius: 50px 50px 0px 50px;
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+  transition: 1s;
 }
 .mobile-button-side.third{
   top: calc(15% + 180px);
 }
 .mobile-hover:hover .mobile-button-side:active{
   width: 9px;
-  transform: translateX(12px);
+  transform: translateX(11px);
   transition: 0s;
 }
 .mobile-hover:hover .mobile-button-side:active:after{
   transform: translate(1px, 1px);
   transition: 0s;
 }
-.mobile-hover:hover .mobile-button-side:hover{
-  transition: 0s;
+.mobile-hover:hover .mobile-button-side:hover,
+.mobile-hover:hover .mobile-button-side:hover:after{
+  transition: 0s !important;
 }
 /*MOBILE TOP*/
 .mobile-hover .mobile-top{
