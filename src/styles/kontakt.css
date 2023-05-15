@@ -32,7 +32,6 @@
 .bg-radiant-gradient-phone{
   pointer-events: none;
   display: block;
-  /*width: 300%;*/
   height: 175%;
   width:auto;
   aspect-ratio: 1/1;
@@ -73,7 +72,6 @@
   transition: 1s;
   box-shadow: 15px 15px 15px rgba(0,0,0,0.7);
   background-color: #000000;
-  /*border:solid 5px #64636a;*/
   position: relative;
 }
 .mobile-background-div{
@@ -109,10 +107,6 @@
 .mobile-hover:hover .mobile-design{
   transform: perspective(700px) rotateY(-25deg) rotateX(8deg) rotateZ(8deg);
   box-shadow: 40px 40px 40px rgba(0,0,0,0.7);
-  /*border-bottom: solid 4px #64636a;
-    border-left: solid 0px #64636a;
-    border-top: solid 2px #64636a;
-    border-right: solid 12px #64636a;*/
 }
 .mobile-hover .obramowanie{
   position: absolute;
@@ -138,7 +132,6 @@
     overflow: hidden;
     transition: 1s;
     pointer-events: none;
-    will-change: height, border-radius;
 }
 .mobile-hover:hover .silver-shine-div{
     height: calc(100% + 4px);
@@ -156,7 +149,6 @@
     overflow: hidden;
     border-radius: 20px 20px 20px 20px;
     transition: 1s;
-    will-change: border-radius, height, width;
 }
 .mobile-hover:hover .silver-shine{
   box-shadow: 3px 0px 12px #cbcbcb;
@@ -188,17 +180,10 @@
     right: 0;
     width: 4px;
     transform: translateX(8px);
-    /*border-left: solid 4px #565656;
-    border-top: solid 2px #565656;
-    border-right: solid 0px #565656;
-    border-bottom: solid 2px #565656;
-    background-color: #818181;
-    background-image: linear-gradient(270deg, #6f6e75, #a3a3a6);*/
     background-color:#565656;
     height: 60px;
     border-radius: 0 2px 2px 0;
     cursor: pointer;
-    will-change: border-radius, width;
 }
 .mobile-button-side.third{
   height:40px;
@@ -208,10 +193,6 @@
     width: 11px;
     transform: translateX(13px);
     overflow: hidden;
-    /*border-left: solid 3px #565656;
-    border-top: solid 0px #565656;
-    border-right: solid 0px #565656;
-    border-bottom: solid 2px #565656;*/
 }
 .mobile-button-side.second{
   top: calc(15% + 70px);
