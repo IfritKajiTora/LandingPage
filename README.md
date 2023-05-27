@@ -2,18 +2,19 @@
 
 Jest to moja Strona Landing Page z 4 sekcjami, Banner, Skills, Porfolio oraz Kontakt.
 
-Banner z krótkim opisem o mnie, o posiadaniu wieloletnim doświedczeniu w pracy na Wordpressie i zaczałem naukę z takimi frameworkami jak React, Next.js oraz Typescript.
-Kiedy tylko na internecie zobaczyłem obraz ręki robota od razu wpadł mi pomysł na animację ręki oraz lekko opuźnionego ruchu lewitujących kart/warstw nad ręką. 
-Myślę że ruch trzech kart sprawia wrażenie oczywistości że można myszką na nie najechać aby je rozdzielić. Niestety nie miałem pomysłu co mógłbym zawrzeć w tych kartach więc są to losowo pasujące do koloru strony obrazki przedstawiające UI jakiejś aplikacji do smart house.
+Banner z krótkim opisem o mnie, o posiadaniu wieloletnim doświedczeniu w pracy na Wordpressie i zaczęciu nauki z takimi frameworkami jak React, Next.js oraz Typescript.
+Kiedy szukałem czegoś ciekawego na baner znalazłem na internecie obraz ręki robota od razu wpadł mi pomysł na animację ręki przedstawiającej technologię oraz lekko opuźnionego ruchu lewitujących kart/warstw strony/aplikacji nad ręką. 
+Myślę że ruch trzech kart sprawia wrażenie oczywistości że można myszką na nie najechać aby je rozdzielić. Kart przedstawiają UI aplikacji smart house.
 
-Sekcja umiejętności, tutaj jest równierz krótki opis, moich umiejętności. Tutaj wpadł mi do głowy pomysł na zrobienie czegoś ciekaweszego niż po prostu wstawienie w nieruchome bloki. Z powodu tego że to ręce piszą kod na klawiaturze postanowiłem wstawić obraz rąk trzymających tytuł Moje umiejętności a po najechaniu myszką na dłonie efekt rozproszenia/rozdzielenia tytułu i ukazanie w animacji z poziomem każdej z umiejętności na podstawie tego jak ja się czuję że posiadam wiedzę.
+Sekcja umiejętności, tutaj jest krótki opis, moich umiejętności. Tutaj wpadł mi do głowy pomysł na zrobienie czegoś ciekaweszego niż po prostu wstawienie w nieruchome bloki i tytuły języków programowania i framworkow. Z powodu tego że to ręce piszą kod na klawiaturze postanowiłem wstawić obraz rąk trzymających tytuł Moje umiejętności, a po najechaniu myszką na dłonie efekt rozproszenia/rozdzielenia rąk i ukazanie w animacji moje umiejętności wraz z oceną do 5 punktów na podstawie tego jak się czuję na jakim poziomie posiadam wiedzę.
 
-Sekcja portfolio, na której znajdują się projekty wykonane przezemnie, niestety niektórych projektów nie mogłem zawrzeć gdyż niektóży klientci zrezygnowali ze swojej działalności, a po przestaniu opłacania swojego serwera, strony zostały zdjęte. Zawarty jest też tutaj dłuższy tekst opisujący dlaczego lub do czego została uzyta dana technologia, aby zainteresowana osoba wiedziała na którą kategorię najpierw zerknąć.
+Sekcja portfolio, na której znajdują się projekty wykonane przezemnie, niestety niektórych projektów nie mogłem zawrzeć gdyż niektóży klientci zrezygnowali ze swojej działalności, a po przestaniu opłacania swojego serwera, strony zostały zdjęte. Zawarty jest też tutaj dłuższy tekst niż na innych sekcjach, opisujący dlaczego lub do czego została użyta dana technologia, aby zainteresowana osoba wiedziała na którą kategorię najpierw zerknąć.
 
-Sekcja kontakt, krótki opis dlaczego warto się ze mną skontaktować, tutaj również wpadł mi do głowy pomysł z przekrzywiającym się telefonem z oszukanym efektem 3D za pomoca samego CSSa. Starałem się z optymalizowac animację jak tylko się dało zmieniając zasadę działania warstw, pozbywając zmieniających się borderów i użyciu warswtw z kolorem tła które zmienia swoją pozycję.
-Jedyny działający link jest do mojego repozytorium na GitHubie z projektami wykonanymi na React/Next.js. E-maila oraz mojego prywatnego numeru telefonu nie chcialem publikować, ale nie chciałem aby na przezentowanym telefonie widziały pustki. Można ukryć te dane ale niestety nie jest to gwarantowana ochrona przed botami a nie chciałbym otrzymywać zbędnego spamu.
+Sekcja kontakt, krótki opis dlaczego warto się ze mną skontaktować, tutaj również wpadł mi do głowy pomysł z przekrzywiającym się telefonem z oszukanym efektem 3D za pomoca samego CSSa, skoro posiadałem taką wiedzę jak to wykonać. Tutaj wyzwaniem była optymalizacja każdej z warstwy przy zmianie kątu.
+Na telefonie znajdują się trzy ikonki, niestety jedyny działający link jest do mojego repozytorium na GitHubie z projektami wykonanymi na React/Next.js. 
+E-maila oraz mojego prywatnego numeru telefonu nie chcialem publikować, ale też nie chciałem aby na przezentowanym telefonie widniały pustki, więc zawarłem obie ikonki na telefonie. Można ukryć dane na stronie internetowej ale niestety nie jest to gwarantowana ochrona przed botami a nie chciałbym otrzymywać zbędnego spamu, jak i również osoby trzecie mogłyby robić różne rzeczy dla zabawy, dlatego nie udostępniam takich danych publicznie.
 Również nigdzie w portalach społecznościowych nie udostępniam swojego pełnego imienia i nazwiska a w szczególności zdjęcia.
-Numer Telefonu, e-mail oraz zdjęcie mojej osoby jedynie udostępniam po przez CV które przesyłam w odpowiedzi na oferty Pracy. 
+Numer Telefonu, e-mail oraz zdjęcie mojej osoby jedynie udostępniam poprzez CV które przesyłam w odpowiedzi na oferty Pracy. 
 
 
 ## Jak uruchomić?
