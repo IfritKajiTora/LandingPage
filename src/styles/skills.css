@@ -5,8 +5,8 @@
 .skill-div:after{
   content: '';
   display: block;
-  width: 250%;
-  height: 250%;
+  width: 225%;
+  height: 225%;
   z-index: -1;
   height: auto;
   aspect-ratio: 1/1;
@@ -151,9 +151,10 @@
 }
 .skillTitle {
   font-size: 1.5rem !important;
+  line-height: 1.1;
   font-weight: 600;
-  margin-bottom: 0px;
   margin-top: 10px;
+  margin-bottom: 5px;
   opacity:0;
   transition: 0.01s 0s;
   position: relative;
@@ -214,7 +215,7 @@ transition: 0.01s 0s;
 }
 
 .skill-div{
-  width: 160px;
+  width: 180px;
   text-align: center;
   color:White;
   position: absolute;

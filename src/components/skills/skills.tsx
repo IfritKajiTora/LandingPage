@@ -57,20 +57,20 @@ export default function Skills(){
 
 					<SingleSkill 
 						skillNumber={4} 
-						skillIcon='/img/skills/javascript.svg' 
-						iconWidth={100} iconHeight={100} 
-						iconAlt='JavsScript icon' 
-						title='JavaScript'
+						skillIcon='/img/skills/javascript-jquery.svg' 
+						iconWidth={180} iconHeight={100} 
+						iconAlt='JavsScript and jQuery icon' 
+						title='JavaScript / jQuery'
 						level='Junior' 
 						rate={2}
 					/>
 
 					<SingleSkill 
 						skillNumber={5} 
-						skillIcon='/img/skills/wordpress.svg' 
-						iconWidth={100} iconHeight={100} 
-						iconAlt='Wordpress icon' 
-						title='Wordpress'
+						skillIcon='/img/skills/wordpress-woocommerce.svg' 
+						iconWidth={180} iconHeight={100} 
+						iconAlt='Wordpress and WooCommerce icon' 
+						title='Wordpress / WooCommerce'
 						level='Regular' 
 						rate={3}
 					/>
@@ -81,8 +81,8 @@ export default function Skills(){
 						iconWidth={153} iconHeight={100} 
 						iconAlt='css & html icon' 
 						title='CSS / HTML'
-						level='Regular' 
-						rate={3}
+						level='Advanced' 
+						rate={4}
 					/>
 
 					<Hidden7thSkill/>
