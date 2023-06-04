@@ -48,7 +48,7 @@ export default function Skills(){
 					<SingleSkill 
 						skillNumber={3} 
 						skillIcon='/img/skills/next.svg' 
-						iconWidth={160} iconHeight={100} 
+						iconWidth={165} iconHeight={100} 
 						iconAlt='next icon' 
 						title='Next' 
 						level='Beginner' 

@@ -7,17 +7,19 @@ const ReactNext:Project[] = [
     link: 'https://landing-page-xi-indol.vercel.app/',
     title: 'Landing Page Portfolio',
     info: 'React\nNext\nTypeScript\nTailwind',
-    target: '_blank'
+    target: '_self',
+    github: 'https://github.com/IfritKajiTora/LandingPage'
     },{
       id: 2,
-      bgImage: '/img/portfolio/pogoda-trojmiasta.jpg',
-      link: 'https://pogoda-trojmiasto.vercel.app/',
-      title: 'Pogoda Trójmiasta',
+      bgImage: '/img/portfolio/pogoda-na-pomorzu.jpg',
+      link: 'https://pogoda-na-pomorzu.vercel.app/',
+      title: 'Pogoda na Pomorzu',
       info: 'React\nNext\nTypeScirpt\nTailwind',
-      target: '_blank'
+      target: '_blank',
+      github: 'https://github.com/IfritKajiTora/pogoda-na-pomorzu'
     },
   /*{
-  id: 2,
+  id: 3,
   bgImage: '/img/portfolio/questionPage.jpg',
   link: '/not-yet-made',
   title: 'W trakcie tworzenia',
