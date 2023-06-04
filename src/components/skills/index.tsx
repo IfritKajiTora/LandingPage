@@ -2,7 +2,7 @@ import React from 'react'
 import AllSkills from '@/components/skills/skills'
 import '@/styles/skills.css'
 
-export default async function Skills() {
+export default function Skills() {
 
   return (
     <section className="bg-skills" id="skills">
