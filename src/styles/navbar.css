@@ -17,7 +17,6 @@
   background-image: linear-gradient(22deg, rgb(14 120 131 / 30%) 25%, rgb(103 212 233 / 30%));
   display: inline-block;
   box-shadow: 15px 15px 15px rgb(0 0 0 / 30%);
-  transition: 1s;
   pointer-events: all;
 }
 [data-theme="light"] .navbarStyle{

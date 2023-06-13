@@ -133,17 +133,3 @@ body{
   background-image: radial-gradient(var(--radiantGradient), transparent 70%);
   transition: 1.5s background-image;
 }
-
-/*FOR LIGHT VERSION*/
-/*.lightMode .bg-radiant-gradient {
-  display: block;
-  width: 175%;
-  height: 175%;
-  height: auto;
-  aspect-ratio: 1/1;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
-  background-image: radial-gradient(rgb(47 156 209 / 61%), transparent 70%);
-}*/
