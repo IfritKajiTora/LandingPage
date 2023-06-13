@@ -12,9 +12,13 @@
 }
 .languageChoice{
   display: block !important;
+  text-shadow: 0 0 1px black;
+}
+[data-theme='light'] .languageChoice{
+  text-shadow: 0 0 1px white;
 }
 .languageChoice+.languageChoice{
-  border-top:solid 2px rgb(160, 160, 160);
+  border-top:solid 2px var(--text);
   transition: 0s border;
 }
 .languageChoice:first-child{
