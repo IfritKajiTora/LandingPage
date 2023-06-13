@@ -3,23 +3,33 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
+  /*--foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-end-rgb: 255, 255, 255;*/
 
   --bodyBackgroundColor: #01020b;
   --primaryGradientBG: linear-gradient(315deg, #005977, #1f9ba7);
   --primary: #1f9ba7;
   --primary-light: #9ed3dd;
+  --text: #ffffff;
+  --radiantGradient: rgb(167 164 191 / 30%);
 }
 
-@media (prefers-color-scheme: dark) {
+/*@media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
+}*/
+
+[data-theme="light"] {
+  --bodyBackgroundColor: #eef8ff;
+  --text: #111111;
+  --radiantGradient: rgb(58 191 255 / 61%);
+  --primary: #00d9ed;
 }
+
 *, ::after, ::before {
   box-sizing: border-box;
   image-rendering: -webkit-optimize-contrast;
@@ -46,10 +56,10 @@ img{
 	max-width: 100%;
 }
 ::selection{
-  -webkit-text-fill-color: white;
+  -webkit-text-fill-color: var(--text);
   background: var(--primary);
   background-image: var(--primaryGradientBG);
-  color: white;
+  color: var(--text);
 }
 html{
   scroll-behavior: smooth;
@@ -63,6 +73,7 @@ html,body{
 body{
   overflow-x: hidden;
   font-size:1rem;
+  transition: 1.5s background;
 }
 
 .container{
@@ -73,27 +84,31 @@ body{
 }
 .title {
   font-size: clamp(2.5rem, 5vw, 4.5rem);
-  color: white;
+  color: var(--text);
   margin-top: 0;
   margin-bottom: 30px;
+  transition: 1.5s color;
 }
 .bannerTitle{
   font-size: clamp(2.8rem, 6vw, 5rem);
   line-height: 1.1;
-  color: white;
+  color: var(--text);
   margin-top: 0;
   margin-bottom: 30px;
+  transition: 1.5s color;
 }
 .bannerText{
   font-size: clamp(1.2rem, 2vw, 2rem);
-  color:white;
+  color:var(--text);
   opacity: 0.8;
+  transition: 1.5s color;
 }
 .text{
   font-size: clamp(1rem, 2vw, 1.6rem);
-  color:White;
+  color:var(--text);
   opacity: 0.8;
   line-height: 1.6;
+  transition: 1.5s color;
 }
 .section100vh{
   width: 100%;
@@ -115,7 +130,8 @@ body{
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
-  background-image: radial-gradient(rgb(167 164 191 / 30%), transparent 70%);
+  background-image: radial-gradient(var(--radiantGradient), transparent 70%);
+  transition: 1.5s background-image;
 }
 
 /*FOR LIGHT VERSION*/

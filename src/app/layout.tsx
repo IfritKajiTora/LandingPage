@@ -1,24 +1,12 @@
-import '@/styles/globals.css'
-import { Metadata } from 'next'
-import { Stick_No_Bills } from 'next/font/google'
+import {ReactNode} from 'react';
 
-const font = Stick_No_Bills({ subsets: ['latin'] })
+type Props = {
+  children: ReactNode;
+};
 
-export const metadata: Metadata = {
-  title: 'React/Next Portfolio',
-  description: 'Landing page Damian React.js/Next.js',
-}
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
-  return (
-    <html lang="pl">
-      <body className={font.className}>
-        {children}
-        </body>
-    </html>
-  )
+// Even though this component is just passing its children through, the presence
+// of this file fixes an issue in Next.js 13.4 where link clicks that switch
+// the locale would otherwise cause a full reload.
+export default function RootLayout({children}: Props) {
+  return children;
 }

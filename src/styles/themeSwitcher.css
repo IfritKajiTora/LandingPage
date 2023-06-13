@@ -1,0 +1,93 @@
+.themeSwitcherLi{
+  margin:0 !important;
+  padding: 0 !important;
+}
+
+#themeSwitcher{
+  margin: 10px auto;
+}
+
+.themeSwitcher{
+  background-color:#222222;
+  border:solid 1px black;
+  border-radius: 50px;
+  height: 24px;
+  width: 48px;
+  position: relative;
+  cursor: pointer;
+  margin: 0 auto;
+  transition: 1.5s;
+}
+
+.themeSwitcher_ball{
+  height: 20px;
+  width: auto;
+  aspect-ratio: 1/1;
+  border-radius: 999px;
+  overflow: hidden;
+  position: absolute;
+  background-color: var(--primary);
+  top:1px;
+  left:1px;
+  transition: 1.5s;
+}
+
+.ballDark{
+  transform: translate(0px, 0px);
+}
+.ballLight{
+  transform: translate(24px, 0px);
+}
+.themeSwitcher_icon{
+  width:22px;
+  height: 22px;
+  position: absolute;
+  z-index: 5;
+  pointer-events: none;
+  top:0px;
+  text-align: center;
+  align-self: center;
+  display: flex;
+  color: #000;
+}
+.themeSwitcher_icon.moon{
+  left:0px;
+}
+.themeSwitcher_icon.sun{
+  right:0px;
+  color: white;
+}
+#themeSwitcher .moonIcon,
+#themeSwitcher .sunIcon{
+  font-size:0.8rem;
+  margin:auto;
+}
+
+[data-theme='light'] .themeSwitcher{
+  background-color: #dff9ff;
+  border: solid 1px rgb(19 150 181);
+}
+
+@media (min-width:501px) and (max-width: 2049px){
+  #themeSwitcher{
+    margin: auto 10px;
+    margin-left: 0;
+  }
+  .themeSwitcher{
+    height: 48px;
+    width: 24px;
+  }
+  .ballLight{
+    transform: translate(0px, 24px);
+  }
+  .themeSwitcher_icon.moon{
+    left:0px;
+    top:0px;
+  }
+  .themeSwitcher_icon.sun{
+    right:0px;
+    bottom:0px;
+    top: unset;
+    color: white;
+  }
+}

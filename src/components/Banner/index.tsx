@@ -1,8 +1,9 @@
-import React from 'react'
+import {useTranslations} from 'next-intl';
 import Hand from '@/components/Banner/hand'
-import '@/styles/banner.css'
+
 
 export default function Banner() {
+	const t = useTranslations('Banner');
 
   return (
     <>
@@ -10,10 +11,17 @@ export default function Banner() {
 			<div className="container self-center">
 				<div className="block lg:grid lg:grid-cols-2 gap-4 py-[50px]">
 					<div className="self-center text-center lg:text-left relative z-10 pb-[50px] lg:pb-[0]">
-						<h1 className="bannerTitle">Front-End Wordpress React Next.js Developer</h1>
-						<p className="bannerText">Witaj! Mam na imię Damian, mam doświadczenie w pracy <span className='whitespace-nowrap'>na Wordpressie</span>
-						 <span className='whitespace-nowrap'> i jestem</span> początkującym React/Next developerem. 
-						Ta strona została wykonana <span className='whitespace-nowrap'>przy użyciu</span> React, Next.js oraz TypeScript.</p>
+
+						<h1 className="bannerTitle">{t('title')}</h1>
+						<p className="bannerText">
+							{t('text.01')}
+							<span className='whitespace-nowrap'>{t('text.02')}</span>
+							<span className='whitespace-nowrap'>{t('text.03')}</span>
+							{t('text.04')}
+							<span className='whitespace-nowrap'>{t('text.05')}</span>
+							{t('text.06')}
+						</p>
+						
 					</div>
 
 					<Hand/>

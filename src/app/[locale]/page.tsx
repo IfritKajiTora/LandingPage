@@ -1,18 +1,17 @@
-import NavBar from '@/components/NavbarMenu'
+import Navbar from '@/components/NavbarMenu'
 import Banner from '@/components/Banner'
-import Skills from '@/src/components/skills'
+import Skills from '@/components/skills'
 import Portfolio from '@/components/Portfolio'
 import Contact from '@/components/Kontakt'
 import Footer from '@/components/Footer'
 
 //const delay = (ms: number) => new Promise(res => setTimeout(res, ms));
-
-export default async function Home() {
+export default function Index() {
   //await delay(100000);
 
   return (
     <>
-      <NavBar/>
+      <Navbar/>
       <main className='overflow-clip'>
         <Banner/>
         <Skills/>

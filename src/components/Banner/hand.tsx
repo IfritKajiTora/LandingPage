@@ -3,7 +3,7 @@
 import React from 'react'
 import Image from 'next/image';
 import { useInView } from 'react-intersection-observer';
-
+import '@/styles/hand.css'
 
 export default function Hand() {
   const {ref: handObserver, inView: handVisible} = useInView({threshold: 0.5});

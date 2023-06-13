@@ -1,0 +1,67 @@
+{
+  "Navbar": {
+    "banner": "Banner",
+    "skills": "Skills",
+    "projects": "Projekty",
+    "contact": "Kontakt"
+  },
+  "Banner": {
+    "title": "Front-End, Wordpress, React, Next.js Developer",
+    "text": {
+      "01": "Witaj! Mam na imię Damian, mam doświadczenie w pracy",
+      "02": " na Wordpressie",
+      "03": " i jestem",
+      "04": " początkującym React/Next developerem. Ta strona została wykonana",
+      "05": " przy użyciu",
+      "06": " React, Next.js oraz TypeScript."
+    }
+  },
+  "Skills": {
+    "title": "Umiejętności",
+    "text": {
+      "01": "Mam doświadczenie w pracy z ",
+      "02": "HTML, CSS, Bootstrap, JavaScript, jQuery, WordPress, WooCommerce, Advanced Custom fields Pro. ",
+      "03": "Aktualnie skupiam się na rozwoju swoich umiejętności w ",
+      "04": "React.js ",
+      "05": "i ",
+      "06": "Next.js, ",
+      "07": "aby stać się jeszcze bardziej wszechstronnym programistą. Stale poszerzam swoją wiedzę i jestem gotowy do nauki nowych technologii."
+    }
+  },
+  "Projects": {
+    "title": "Portfolio",
+    "text_1": {
+      "01": "W mojej pracy jako twórca stron internetowych wykonałem wiele projektów dla klientów o różnych wymaganiach. Dla tych, którzy potrzebowali możliwości dodawania treści, takich jak artykuły lub ",
+      "02": "wpisy ",
+      "03": "na ",
+      "04": "blog ",
+      "05": ", zdecydowałem się na wykorzystanie popularnego systemu zarządzania treścią, jakim jest ",
+      "06": "WordPress."
+    },
+    "text_2": {
+      "01": "W wielu projektach skorzystałem z wtyczki ",
+      "02": "Advanced Custom Fields Pro",
+      "03": ", co umożliwiło klientom dodawanie lub edytowanie tytułów, treści, obrazów oraz innych elementów z łatwością z poziomu panelu ",
+      "04": "CMS. ",
+      "05": "W niektórych projektach, gdzie wymagany był ",
+      "06": "sklep internetowy",
+      "07": ", wykorzystałem wtyczkę ",
+      "08": "WooCommerce",
+      "09": ", co umożliwiło klientom dodawanie nowych produktów oraz zarządzanie sklepem bezpośrednio z poziomu panelu administratora."
+    },
+    "text_3": {
+      "01": "Stworzyłem również strony internetowe  wykorzystując sam ",
+      "02": "HTML, CSS ",
+      "03": "oraz ",
+      "04": "JavaScript",
+      "05": ", aby zapewnić wyjątkowe projekty zgodne z wymaganiami klientów. Linki do niektórych moich prac znajdują się poniżej."
+    }
+  },
+  "Contact": {
+    "title": "Kontakt",
+    "text": {
+      "01": "Jestem młodym, ambitnym Developerem i szukam długoterminowej współpracy jako Wordpress lub Junior React/Next developer, gdzie będę miał możliwość rozwijać się w tej dynamicznie rozwijającej branży. Jestem otwarty na szkolenia i jestem gotów dostosować się do Państwa potrzeb, aby osiągnąć wspólne cele.",
+      "02": "Jeśli chcielibyście Państwo przyjąć mnie do swojego zespołu, serdecznie zachęcam do kontaktu ze mną za pośrednictwem telefonu lub poczty elektronicznej."
+    }
+  }
+}

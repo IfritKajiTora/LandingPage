@@ -15,9 +15,9 @@
   border-radius: 0px 0px clamp(50px, 30vw, 200px) 0px;
   overflow: hidden;
   padding-top: 100px;
-    margin-top: -100px;
-    max-width: 120%;
-    width: 120%;
+  margin-top: -100px;
+  max-width: 120%;
+  width: 120%;
 }
 
 .hand-animate{
@@ -36,13 +36,13 @@
   z-index: 1;
   max-width:100%;
   animation-direction: alternate;
-    animation-duration: 4s;
-    animation-delay: 0s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-    animation-name: HandFLoat;
-     transform-origin: center right;
-     left:5px;
+  animation-duration: 4s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-name: HandFLoat;
+  transform-origin: center right;
+  left:5px;
 }
 
 @keyframes HandFLoat{

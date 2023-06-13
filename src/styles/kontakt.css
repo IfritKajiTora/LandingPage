@@ -10,6 +10,10 @@
   pointer-events: all;
 }
 
+.phoneDateAM-PM{
+  font-size: clamp(1rem, 4.2vw, 1.8rem);
+  display: inline-block;
+}
 .mobile-hover{
   display: inline-block;
   max-width: 100%;
@@ -39,7 +43,7 @@
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
-  background-image: radial-gradient(rgb(167 164 191 / 30%), transparent 70%);
+  background-image: radial-gradient(var(--radiantGradient), transparent 70%);
 }
 /*.mobile-background-behind{
   overflow: hidden;

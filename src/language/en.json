@@ -1,0 +1,67 @@
+{
+  "Navbar": {
+    "banner": "Banner",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "Banner": {
+    "title": "Front-End, Wordpress, React, Next.js Developer",
+    "text": {
+      "01": "Hello! My name is Damian, I have experience working ",
+      "02": "with Wordpress ",
+      "03": "and I am ",
+      "04": "a beginner React/Next developer. This page was ",
+      "05": " made using ",
+      "06": " React, Next.js and TypeScript."
+    }
+  },
+  "Skills": {
+    "title": "Skills",
+    "text": {
+      "01": "I have experience in working with ",
+      "02": "HTML, CSS, Bootstrap, JavaScript, jQuery, WordPress, WooCommerce, Advanced Custom fields Pro. ",
+      "03": "Currently, I am focusing on developing my skills in ",
+      "04": "React.js ",
+      "05": "and ",
+      "06": "Next.js, ",
+      "07": "to become an even more versatile programmer. I am constantly expanding my knowledge and I am ready to learn new technologies."
+    }
+  },
+  "Projects": {
+    "title": "Projects",
+    "text_1": {
+      "01": "In my job as a web developer, I have done many projects for clients with different requirements. For those who needed the ability to add content, such as ",
+      "02": "articles ",
+      "03": "or ",
+      "04": "blog entries",
+      "05": ", I decided to use the popular content management system that is ",
+      "06": "WordPress."
+    },
+    "text_2": {
+      "01": "In many projects with Wordpress I was working with plugin ",
+      "02": "Advanced Custom Fields Pro",
+      "03": ", which allowed clients to add or edit titles, content, images and other elements easily from the",
+      "04": "CMS panel. ",
+      "05": "In some projects where was required ",
+      "06": "online store",
+      "07": ", I used plugin ",
+      "08": "WooCommerce",
+      "09": ", which allowed customers to add new products and manage the store directly from the admin panel."
+    },
+    "text_3": {
+      "01": "I have also created websites using only ",
+      "02": "HTML, CSS ",
+      "03": "and ",
+      "04": "JavaScript",
+      "05": ", to provide unique designs in line with customer requirements. Links to some of my work are below."
+    }
+  },
+  "Contact": {
+    "title": "Contact",
+    "text": {
+      "01": "I am a young, ambitious Developer and I am looking for long-term cooperation as a Wordpress or Junior React/Next developer, where I will have the opportunity to increase my knowledge and skills in this dynamically growing industry. I am open to training and I am ready to adapt to your needs to achieve common goals.",
+      "02": "If you would like to add me to your team, please feel free to contact me by phone or e-mail."
+    }
+  }
+}

@@ -2,23 +2,26 @@
 import React, {useState} from 'react'
 import { useInView } from 'react-intersection-observer'
 import dynamic from'next/dynamic'
+import '@/styles/portfolio.css'
+
+const loadingClassNames = 'text-center title absolute left-0 right-0 top-0 animate-pulse min-h-[330px] leading-[4]'
 
 const Woocommerce = dynamic(() => import('@/components/Portfolio/tabs/tabWordpressWoocommerce'), {
-  ssr:false, loading: () => <p className='text-center title absolute left-0 right-0 top-0 animate-pulse'>LOADING</p>
+  ssr:false, loading: () => <p className={loadingClassNames}>LOADING</p>
 })
 const Wordpress = dynamic(() => import('@/components/Portfolio/tabs/tabWordpress'), {
-  ssr:false, loading: () => <p className='text-center title absolute left-0 right-0 top-0 animate-pulse'>LOADING</p>
+  ssr:false, loading: () => <p className={loadingClassNames}>LOADING</p>
 })
 const ReactNext = dynamic(() => import('@/components/Portfolio/tabs/tabReactNext'), {
-  ssr:false, loading: () => <p className='text-center title absolute left-0 right-0 top-0 animate-pulse'>LOADING</p>
+  ssr:false, loading: () => <p className={loadingClassNames}>LOADING</p>
 })
 const HtmlCss = dynamic(() => import('@/components/Portfolio/tabs/tabHtmlCss'), {
-  ssr:false, loading: () => <p className='text-center title absolute left-0 right-0 top-0 animate-pulse'>LOADING</p>
+  ssr:false, loading: () => <p className={loadingClassNames}>LOADING</p>
 })
 
 export default function Tabs() {
   const {ref: portfolioRef , inView: portfolioVisible} = useInView({threshold: 0.5, triggerOnce:true});
-  const [tab, changeTab] = useState<string>('woocommerce');
+  const [tab, changeTab] = useState<string>('react/next');
 
   return (
     <>
@@ -31,7 +34,7 @@ export default function Tabs() {
 
       <div ref={portfolioRef} className={`pt-[50px] ${portfolioVisible ? 'visible' : ''}`}>
         <div className='tab tab-visible'>
-          <div className='grid md:grid-cols-2 xl:grid-cols-3 gap-4 relative'>
+          <div className='grid md:grid-cols-2 xl:grid-cols-3 gap-4 relative min-h-[330px]'>
             {portfolioVisible && tab == 'woocommerce' && <Woocommerce/>}
             {portfolioVisible && tab == 'react/next' && <ReactNext/>}
             {portfolioVisible && tab == 'wordpress' && <Wordpress/>}

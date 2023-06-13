@@ -1,6 +1,6 @@
 import React from 'react'
 import Strona from './strona'
-import wordpressWoocommerce from '@/src/constants/portfolio/woocommerce'
+import wordpressWoocommerce from '@/constants/portfolio/woocommerce'
 
 export default function TabWordpressWoocommerce() {
   return (

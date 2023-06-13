@@ -1,3 +1,11 @@
+:root{
+  --skillRadialGradient: rgb(167 164 191 / 25%);
+}
+
+[data-theme="light"] {
+  --skillRadialGradient: rgb(92 196 247 / 61%);
+}
+
 .bg-skills{
   width: 100%;
   display: flex;
@@ -14,7 +22,7 @@
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
-  background-image: radial-gradient(rgb(167 164 191 / 25%), transparent 70%);
+  background-image: radial-gradient(var(--skillRadialGradient), transparent 70%);
   transition: 0.01s;
   transition-delay: 0s;
 }
@@ -36,7 +44,7 @@
   transform: perspective(100px) translateZ(-50px);
   opacity: 0;
   align-self: center;
-  color: white;
+  color: #ffffff;
   margin-left: auto;
   margin-right: auto;
   transition: 1s;
@@ -67,7 +75,8 @@
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
-  background-image: radial-gradient(rgb(167 164 191 / 30%), transparent 70%);
+  background-image: radial-gradient(var(--skillRadialGradient), transparent 70%);
+  z-index: -1;
 }
 #skills-title:hover{
   transform: perspective(100px) translateZ(-50px);
@@ -135,6 +144,9 @@
    transition-delay: 0s;
    background-color:black;
 }
+[data-theme="light"] .skillDotFill{
+  background-color: #ffffff;
+}
 .stillDotFill:after{
   background-image: radial-gradient(#ffffff,transparent, transparent);
   width: 200%;
@@ -148,6 +160,9 @@
 .skillDotEmpty {
   background-color: #000000;
   outline: solid 1px #6db8d1;
+}
+[data-theme="light"] .skillDotEmpty{
+  background-color: #ffffff;
 }
 .skillTitle {
   font-size: 1.5rem !important;
@@ -190,6 +205,9 @@ display: block;
 color:#ff201d;
 font-weight: 600;
 }
+[data-theme="light"] .skillLevel .trueSkill{
+  color: #990200;
+}
 #skills-title:hover ~ .skill-div .skillLevel .falseSkill,
 #skills-title:hover ~ .skill-div .skillLevel .trueSkill{
 transition: 0.5s 5.5s !important;
@@ -212,12 +230,14 @@ width: auto;
 position: relative;
 transform: translateY(50%);
 transition: 0.01s 0s;
+filter: drop-shadow(0px 0px 1px black);
 }
+
 
 .skill-div{
   width: 180px;
   text-align: center;
-  color:White;
+  color:var(--text);
   position: absolute;
   opacity: 0;
   transition: 1s;
@@ -536,6 +556,9 @@ transform: translate(calc(-142% - 80px), calc(-90% - 108px));
   z-index: -1;
   max-width: 200%;
   filter: invert(1) drop-shadow(0px 0px 25px #56bcf9);
+}
+[data-theme="light"] .skillsHands{
+  filter: invert(0) drop-shadow(0px 0px 25px #2988be);
 }
 
 .hidden-skill-div{

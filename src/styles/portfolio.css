@@ -98,15 +98,16 @@
   text-shadow: 1px 0 black, 0 1px black, -1px 0 black, 0 -1px black;
 }
 
-.portfolioLink .github_repo_link{
+.github_repo_link{
   position: absolute;
   bottom: 15px;
   left: 15px;
   height:40px;
   width: 40px;
   transition: 0.5s;
+  z-index: 5;
 }
-.portfolioLink .github_repo_link:hover{
+.github_repo_link:hover{
   scale: 1.2;
 }
 
@@ -143,8 +144,10 @@
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
-  background-image: radial-gradient(rgb(167 164 191 / 30%), transparent 70%);
+  background-image: radial-gradient(var(--radiantGradient), transparent 70%);
+  z-index: -1;
 }
+
 .linkTab.active{
   text-shadow: 0 0 63px var(--primary);
   animation: pulsate 0.11s ease-in-out infinite alternate;

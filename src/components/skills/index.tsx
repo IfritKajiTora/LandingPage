@@ -1,19 +1,26 @@
-import React from 'react'
+import {useTranslations} from 'next-intl';
 import AllSkills from '@/components/skills/skills'
-import '@/styles/skills.css'
+
 
 export default function Skills() {
+	const t = useTranslations('Skills');
 
   return (
     <section className="bg-skills" id="skills">
 			<div className="container mx-auto relative py-[50px] self-center text-center">
-				<h2 className="title">Umiejętności</h2>
-				<p className="text">Mam doświadczenie w pracy z <b>HTML</b>, <b>CSS </b>, <b>Bootstrap</b>, 
-				<b>JavaScript</b> i <b>jQuery</b>, <b>WordPress</b>, <b>WooCommerce</b>, <b>Advanced Custom fields Pro</b>.
-				Aktualnie skupiam się na rozwoju swoich umiejętności w <b>React.js</b> i <b>Next.js</b>, aby stać się jeszcze 
-				bardziej wszechstronnym programistą. Stale poszerzam swoją wiedzę i jestem gotowy do nauki nowych technologii.</p>
+				
+				<h2 className="title">{t('title')}</h2>
+				<p className="text">
+					{t('text.01')}
+					<b>{t('text.02')}</b>
+					{t('text.03')}
+					<b>{t('text.04')}</b>
+					{t('text.05')}
+					<b>{t('text.06')}</b>
+					{t('text.07')}
+				</p>
 					
-					<AllSkills/>
+				<AllSkills/>
 					
 		</div>
 	</section>

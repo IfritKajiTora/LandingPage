@@ -1,7 +1,7 @@
 'use client'
 import React, { useState, useEffect } from 'react'
 import { format } from 'date-fns'
-import {pl} from 'date-fns/locale'
+import {pl, enGB} from 'date-fns/locale'
 
 
 export default function MobileDate() {
@@ -15,18 +15,39 @@ export default function MobileDate() {
   }, []);
 
 	/*PHONE DATE*/
-	const dayName = format(date, 'EEEE', { locale: pl, });
-	const monthNameShort = format(date, 'MMM', { locale: pl, });
-	const dayNumber = format(date, 'd', { locale: pl, });
-	const minutes = format(date, 'mm', { locale: pl, });
-	const hour = format(date, 'H', { locale: pl, });
-	const year = format(date, 'yyyy', { locale: pl, });
+  const languageHTML = document.documentElement.lang;
+  let switchLanguage = pl;
+  switch(languageHTML){
+    case 'pl': 
+      switchLanguage = pl;
+      break;
+    default: switchLanguage = enGB;
+  }
+
+	const dayName = format(date, 'EEEE', { locale: switchLanguage, });
+	const monthNameShort = format(date, 'MMM', { locale: switchLanguage, });
+	const dayNumber = format(date, 'd', { locale: switchLanguage, });
+	const minutes = format(date, 'mm', { locale: switchLanguage, });
+	const hour = Number(format(date, 'H', { locale: switchLanguage, }));
+	const year = format(date, 'yyyy', { locale: switchLanguage, });
+  const hourAM_PM = hour % 12;
   
   return (
     <>
       <div className='mobile-date'>
-        <div className='timeContent'>{hour}:{minutes}</div>
-        <div className='dateContent'>{dayName}, {dayNumber} {monthNameShort} {year}</div>
+        <div className='timeContent'>
+          {switchLanguage === pl
+          ? <>{hour}:{minutes}</>
+          : <>{hourAM_PM}:{minutes} <div className='phoneDateAM-PM'>{hour < 12 ? 'a.m.' : 'p.m.'}</div></>
+          }
+          
+        </div>
+        <div className='dateContent'>
+          {switchLanguage === pl 
+          ? <>{dayName}, {dayNumber} {monthNameShort} {year}</> 
+          : <>{dayName}, {monthNameShort} {dayNumber} {year}</>
+          }
+        </div>
       </div>
     </>
   )

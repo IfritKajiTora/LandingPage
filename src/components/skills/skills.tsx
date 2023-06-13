@@ -1,11 +1,10 @@
 'use client'
-
 import React from 'react'
 import SingleSkill from '@/components/skills/singleSkill'
 import Hidden7thSkill from '@/components/skills/hidden7thskill'
 import Image from 'next/image'
 import { useInView } from 'react-intersection-observer'
-
+import '@/styles/skills.css'
 
 export default function Skills(){
   const {ref: skillsObserver, inView: skillsVisible } = useInView({threshold: 0.5});
@@ -48,7 +47,7 @@ export default function Skills(){
 					<SingleSkill 
 						skillNumber={3} 
 						skillIcon='/img/skills/next.svg' 
-						iconWidth={165} iconHeight={100} 
+						iconWidth={166} iconHeight={100} 
 						iconAlt='next icon' 
 						title='Next' 
 						level='Beginner' 

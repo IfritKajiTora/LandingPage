@@ -1,26 +1,27 @@
 .navbarFloat{
   position: fixed;
   z-index: 999;
-  bottom: 80px;
+  bottom: 5rem;
   left: 0;
   right: 0;
-  margin: 0 30px;
+  margin: 0 2rem;
   text-align: center;
   pointer-events: none;
 }
 .navbarStyle{
-  color: white;
+  color: var(--text);
   backdrop-filter: blur(3px);
   border-radius: 100px;
-  padding: 0 30px;
+  padding: 0 2rem;
   text-align: center;
-  /*box-shadow: 0 0 8px 10px rgba(255,255,255,0.04);
-  background-color: rgb(255 255 255 / 4%);*/
   background-image: linear-gradient(22deg, rgb(14 120 131 / 30%) 25%, rgb(103 212 233 / 30%));
   display: inline-block;
   box-shadow: 15px 15px 15px rgb(0 0 0 / 30%);
   transition: 1s;
   pointer-events: all;
+}
+[data-theme="light"] .navbarStyle{
+  background-image: linear-gradient(22deg, rgb(24 185 201 / 60%) 25%, rgb(103 212 233 / 60%));
 }
 .navbarList{
   transition: 0.5s;
@@ -29,6 +30,7 @@
   margin: 0.8rem;
   padding: 0px 1.2rem;
   display: inline-block;
+  align-self: center;
 }
 
 @media (max-width:767px){
@@ -65,6 +67,9 @@
   left: 50%;
   background-image: radial-gradient(rgb(167 164 191 / 50%), transparent 50%);
 }
+[data-theme='light'] .navbarList li a:after{
+  background-image: radial-gradient(rgb(255 255 255 / 70%), transparent 50%);
+}
 .navbarList li a:hover:after,
 .navbarList li a:hover:focus,
 .navbarList li a:hover:active{
@@ -73,10 +78,13 @@
 .sectionIcon{
   position:relative;
   display: inline-block;
-  font-size: clamp(1.2rem, 2vw, 2rem);
+  font-size: clamp(1.4rem, 2vw, 2rem);
   margin-bottom: 5px;
   margin-top: 5px;
   opacity: 0.5;
+}
+[data-theme="light"] .sectionIcon{
+  opacity: 0.7;
 }
 .sectionName{
   position:relative;
@@ -86,32 +94,27 @@
 .hamburgerNav{
   display: none;
 }
-.hamburgerStyle{
-  height:25px;
-  width: 40px;
-  position: relative;
-  transition: 0.5s;
-}
+
 .hamburgerNav svg{
   position: relative;
   display: inline-block;
-  font-size: 32px;
-  top:-6px;
+  font-size: 2rem;
   opacity: 0.7;
   transition: 0.5s;
 }
 .hamburgerNav:hover{
   opacity: 1;
 }
+
 @media (max-width:500px){
   .navbarFloat{
     right: unset;
   }
   .navbarStyle{
-    padding: 15px;
+    padding: 0.6rem;
   }
   .navbarList li {
-    margin: 15px 0px;
+    margin: 0.9rem 0px;
     padding: 0px 0px;
     display: block;
   }
@@ -123,6 +126,7 @@
     display: inline-block;
     position: relative;
     cursor: pointer;
+    top: -4px;
   }
   .navbarList{
     max-height: 0px;
@@ -133,7 +137,7 @@
     pointer-events: all;
     max-height: 500px;
     opacity: 1;
-    margin-bottom: 20px;
+    margin-bottom: 1.2rem;
   }
 }
 
@@ -145,13 +149,19 @@
   }
   .navbarFloat {
     top: 50%;
-    left: 80px !important;
+    left: 5rem !important;
     right: inherit !important;
     transform: translateY(-50%);
     margin: 0 !important;
     bottom: inherit !important;
   }
   .navbarStyle{
-    padding:15px;
+    padding:0.9rem;
+  }
+}
+
+@media (max-width:500px), (min-width: 2050px){
+  .navbarList{
+    display: block !important;
   }
 }
