@@ -8,7 +8,6 @@ import Footer from '@/components/Footer'
 //const delay = (ms: number) => new Promise(res => setTimeout(res, ms));
 export default function Index() {
   //await delay(100000);
-
   return (
     <>
       <Navbar/>
