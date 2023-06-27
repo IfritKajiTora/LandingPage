@@ -45,26 +45,6 @@
   left: 50%;
   background-image: radial-gradient(var(--radiantGradient), transparent 70%);
 }
-/*.mobile-background-behind{
-  overflow: hidden;
-  position: absolute;
-  top:50%;
-  left:50%;
-  width:150%;
-  aspect-ratio: 1/1;
-  transform: translate(-50%, -50%);
-  border-radius: 100%;
-  background-color: var(--primary);
-}
-.mobile-background-behind:after{
-  background-image: radial-gradient(#ffffff,transparent, transparent);
-  width: 200%;
-  height: 200%;
-  top: -70%;
-  position: absolute;
-  left: -30%;
-  content: '';
-}*/
 .mobile-design{
   border-radius: 25px;
   width:320px;

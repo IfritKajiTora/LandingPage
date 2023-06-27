@@ -149,8 +149,6 @@
 }
 
 .linkTab.active{
-  text-shadow: 0 0 63px var(--primary);
-  animation: pulsate 0.11s ease-in-out infinite alternate;
   scale:1.1;
 }
 .linkTab.active:after{

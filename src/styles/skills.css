@@ -63,8 +63,6 @@
   transition: 1s;
   position: relative;
    font-size: clamp(2.2rem, 5vw, 4.6rem);
-   text-shadow: 0 0 63px var(--primary);
-  animation: pulsate 0.11s ease-in-out infinite alternate;
 }
 .skill-title-bg-transparent{
   pointer-events: none;
@@ -88,14 +86,6 @@
   opacity: 0;
   text-shadow: none !important;
   animation: none !important;
-}
-@keyframes pulsate {
-100% {
-  text-shadow: 0 0 63px var(--primary);
-}
-0% {
-  text-shadow: 0 0 53px var(--primary);
-  }
 }
 
 .skill-allow-hover-on-all{
