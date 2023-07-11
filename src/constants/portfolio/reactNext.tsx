@@ -17,9 +17,17 @@ const ReactNext:Project[] = [
       info: 'React\nNext\nTypeScirpt\nTailwind',
       target: '_blank',
       github: 'https://github.com/IfritKajiTora/pogoda-na-pomorzu'
-    },
+    },{
+      id: 3,
+      bgImage: '/img/portfolio/redux-toolkit-shop.jpg',
+      link: 'https://redux-toolkit-shop.vercel.app/',
+      title: 'Redux Toolkit Shop',
+      info: 'React (Vite)\nTypeScirpt\nReact Redux\nRedux Toolkit\nReact Query\nReact Bootstrap',
+      target: '_blank',
+      github: 'https://github.com/IfritKajiTora/Redux-toolkit-shop'
+    }
   /*{
-  id: 3,
+  id: 4,
   bgImage: '/img/portfolio/questionPage.jpg',
   link: '/not-yet-made',
   title: 'W trakcie tworzenia',

@@ -26,10 +26,10 @@ export default function Skills(){
 
 					<SingleSkill 
 						skillNumber={1} 
-						skillIcon='/img/skills/react.svg' 
-						iconWidth={112} iconHeight={100} 
+						skillIcon='/img/skills/react-redux.svg' 
+						iconWidth={180} iconHeight={100} 
 						iconAlt='react icon' 
-						title='React' 
+						title='React / Redux' 
 						level='Beginner' 
 						rate={1}
 					/>

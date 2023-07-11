@@ -84,7 +84,7 @@
   color:white;
   display: block;
   line-height: 1.1;
-  margin-bottom:1rem;
+  margin-bottom: 0.4rem;
   text-shadow: 1px 0 black, 0 1px black, -1px 0 black, 0 -1px black;
   font-weight: 600;
 }
@@ -96,6 +96,7 @@
   color:white;
   display: block;
   text-shadow: 1px 0 black, 0 1px black, -1px 0 black, 0 -1px black;
+  line-height: 1.2;
 }
 
 .github_repo_link{
